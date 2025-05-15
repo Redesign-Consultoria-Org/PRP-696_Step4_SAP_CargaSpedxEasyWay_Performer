@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Estrutura de balançoDRE",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "YlTGVDEk9Ua31Q-vtUFfBA",
+  "Reference": "lg5H7izgS0qA3fwFs2FUbQ/YlTGVDEk9Ua31Q-vtUFfBA",
+  "ParentRef": "lg5H7izgS0qA3fwFs2FUbQ/lh_CWDkbS0mUGvOlTpI-xA",
+  "Created": "2025-05-12T19:11:46.3205282Z",
+  "Updated": "2025-05-12T19:11:46.3205282Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.10.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

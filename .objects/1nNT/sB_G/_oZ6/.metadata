@@ -1,0 +1,13 @@
+﻿{
+  "Name": "BalançoC.L&P(1)",
+  "Type": "Screen",
+  "Id": "_oZ6sTZf3k6lpSofk22zBg",
+  "Reference": "lg5H7izgS0qA3fwFs2FUbQ/_oZ6sTZf3k6lpSofk22zBg",
+  "ParentRef": "lg5H7izgS0qA3fwFs2FUbQ/sB_G-YANq0az7cKY0D7obw",
+  "Created": "2025-05-13T13:19:25.0288509Z",
+  "Updated": "2025-05-13T13:19:25.0288509Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.10.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

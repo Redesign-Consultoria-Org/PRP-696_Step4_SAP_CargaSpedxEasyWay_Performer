@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Exercício do relatório",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "VzaXjtIv1kSY8c7lQyzcjw",
+  "Reference": "lg5H7izgS0qA3fwFs2FUbQ/VzaXjtIv1kSY8c7lQyzcjw",
+  "ParentRef": "lg5H7izgS0qA3fwFs2FUbQ/lh_CWDkbS0mUGvOlTpI-xA",
+  "Created": "2025-05-12T19:16:10.0228338Z",
+  "Updated": "2025-05-12T19:16:10.0228338Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.10.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

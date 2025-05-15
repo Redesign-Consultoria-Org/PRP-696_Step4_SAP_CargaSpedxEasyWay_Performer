@@ -1,0 +1,12 @@
+﻿{
+  "Name": "BalançoC.L&P",
+  "Type": "App",
+  "Id": "1nNTqrc_fEuMLDzo1o--CQ",
+  "Reference": "lg5H7izgS0qA3fwFs2FUbQ/1nNTqrc_fEuMLDzo1o--CQ",
+  "Created": "2025-05-12T19:08:33.0392566Z",
+  "Updated": "2025-05-12T19:08:33.0392566Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.10.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

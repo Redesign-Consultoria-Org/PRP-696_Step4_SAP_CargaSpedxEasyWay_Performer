@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Memorizar minha decisão",
+  "Type": "Element",
+  "TaxonomyType": "Checkbox",
+  "Id": "sCzGk_Iis0imL3wxJyCMig",
+  "Reference": "lg5H7izgS0qA3fwFs2FUbQ/sCzGk_Iis0imL3wxJyCMig",
+  "ParentRef": "lg5H7izgS0qA3fwFs2FUbQ/lh_CWDkbS0mUGvOlTpI-xA",
+  "Created": "2025-05-13T13:32:51.6276877Z",
+  "Updated": "2025-05-13T13:32:51.6276877Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.10.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

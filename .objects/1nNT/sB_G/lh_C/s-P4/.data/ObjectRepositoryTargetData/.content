@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="xyjbRXLynEG9k8ZmbMtoAQ" Reference="lg5H7izgS0qA3fwFs2FUbQ/s-P4iVsBI0O_jvKao1oTnw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" CVScreenId="c33c601b-2857-4991-bc20-45e39f13f928" CvElementArea="22, 207, 14, 14" CvType="CheckBox" DesignTimeRectangle="22, 207, 14, 14" DesignTimeScaleFactor="1" ElementType="CheckBox" Guid="729ce7da-e806-43af-bd0f-116b81727d91" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='#*' title='SAP GUI Security' idx='*' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="1">
+          <Target CVScreenId="c33c601b-2857-4991-bc20-45e39f13f928" CvTextArea="37, 206, 127, 15" CvTextArgument="Remember My Decision" CvType="Text" DesignTimeRectangle="37, 206, 127, 15" ElementType="Text" Guid="15a9c902-94a2-4957-813e-13014537f501" SearchSteps="CV" TargetType="ComputerVisionBased" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="0c09f80da74e04226962573d75557ae2.png" xmlns="">0ESw5WfyisEWEiOrAlUWeiw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

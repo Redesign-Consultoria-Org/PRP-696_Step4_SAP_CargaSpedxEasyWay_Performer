@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="1IHzzvLsMEWSTMCPS8wx1A" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="253, 172, 34, 20" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;sap id='usr/ctxtSD_KTOPL-LOW' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtSD_KTOPL-LOW' /&gt;" Guid="81d51b4d-744e-4670-8b6b-2319770538e7" ImageBase64="" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Balanço/C.L&amp;amp;P' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="29, 172, 202, 20" ElementType="Text" FullSelectorArgument="&lt;sap id='usr/txt%_SD_KTOPL_%_APP_%-TEXT' /&gt;" Guid="4fd526be-d96c-44aa-8736-8e4949fcbdca" SearchSteps="Selector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="7244ee5978aaa7f941ec249e5032f584.png" xmlns="">0wDCyHDJoOk-wGefQRgdC6g</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="AbZlupklh0aBZPcWqfDBPA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="88, 33, 370, 20" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;sap id='usr/ctxtDY_PATH' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtDY_PATH' check:text='C:\Users\gbs.squadrpa.hmg\Documents\SAP\SAP GUI\' /&gt;" Guid="b79315ee-3bef-4cb8-b627-d9dbc03d33b7" ImageBase64="" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='#*' title='Balanço/C.L&amp;amp;P' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="4, 33, 83, 20" ElementType="Toolbar" FullSelectorArgument="&lt;sap id='usr/lblDY_PATH' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/lblDY_PATH' check:text='Diretório' /&gt;" Guid="6601eaa3-b810-4ab0-a67a-c719262efaa8" ImageBase64="" SearchSteps="Selector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="84b83bf39cf6ed9a5e7457e15416d44b.png" xmlns="">0p7sEAe_d90SuOfdxrT-bEA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="agKiGVgKIE20UdOM6Isp5A" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="88, 55, 370, 20" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;sap id='usr/ctxtDY_FILENAME' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtDY_FILENAME' check:text='export.XLSX' /&gt;" Guid="223c2c8e-931b-40d6-8948-8e52487cd696" ImageBase64="" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='#*' title='Balanço/C.L&amp;amp;P' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="4, 55, 69, 20" ElementType="Toolbar" FullSelectorArgument="&lt;sap id='usr/lblDY_FILENAME' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/lblDY_FILENAME' check:text='Nome file' /&gt;" Guid="a1fcedcb-4420-4700-abc4-acfd93106227" ImageBase64="" SearchSteps="Selector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="f9b47782619a0d844a40fd9780d3d472.png" xmlns="">0-LM5_c0DuUy6gpiMWaqpYg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

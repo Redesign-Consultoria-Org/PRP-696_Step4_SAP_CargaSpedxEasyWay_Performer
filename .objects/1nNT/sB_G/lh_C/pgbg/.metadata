@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Lista clássica",
+  "Type": "Element",
+  "Id": "pgbgQXp1mEyMl6C7yFaUJw",
+  "Reference": "lg5H7izgS0qA3fwFs2FUbQ/pgbgQXp1mEyMl6C7yFaUJw",
+  "ParentRef": "lg5H7izgS0qA3fwFs2FUbQ/lh_CWDkbS0mUGvOlTpI-xA",
+  "Created": "2025-05-12T19:35:35.0286717Z",
+  "Updated": "2025-05-12T19:35:35.0286717Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.10.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

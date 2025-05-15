@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="We924sp8a0OO361k-VbgKw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="253, 436, 20, 20" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;sap id='usr/ctxtSD_RLDNR-LOW' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtSD_RLDNR-LOW' /&gt;" Guid="fdd610ab-c653-4ff3-8c69-a60945836599" ImageBase64="" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Balanço/C.L&amp;amp;P' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="29, 436, 202, 20" ElementType="Text" FullSelectorArgument="&lt;sap id='usr/txt%_SD_RLDNR_%_APP_%-TEXT' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/txt%_SD_RLDNR_%_APP_%-TEXT' check:text='Ledger' /&gt;" Guid="431e3a3e-82db-4a7b-9744-f70bf3ca68b4" ImageBase64="" SearchSteps="Selector, FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="01a9e2528493846e42f7e64e7c795d12.png" xmlns="">0TUTdtlnL8kSN2XhDk7HrQw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

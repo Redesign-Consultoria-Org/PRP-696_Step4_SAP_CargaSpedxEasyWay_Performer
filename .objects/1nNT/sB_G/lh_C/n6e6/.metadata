@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Períodos de relatório",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "n6e6C7MNiEKCLN_-8qkygw",
+  "Reference": "lg5H7izgS0qA3fwFs2FUbQ/n6e6C7MNiEKCLN_-8qkygw",
+  "ParentRef": "lg5H7izgS0qA3fwFs2FUbQ/lh_CWDkbS0mUGvOlTpI-xA",
+  "Created": "2025-05-12T19:24:53.6739554Z",
+  "Updated": "2025-05-12T19:24:53.6739554Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.10.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

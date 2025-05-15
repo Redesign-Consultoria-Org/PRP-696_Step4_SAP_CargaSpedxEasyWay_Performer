@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="BXX5OBVqPEGQ5-oEVXKlGw" Reference="lg5H7izgS0qA3fwFs2FUbQ/xzEmsgfK3EyONebuf4lT5g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" CVScreenId="aea3328a-b61e-453c-a225-c25d91d3d97e" CvElementArea="21, 145, 76, 25" CvTextArea="38, 151, 43, 12" CvTextArgument="Permitir" CvType="Button" DesignTimeRectangle="21, 145, 76, 25" DesignTimeScaleFactor="1" ElementType="Button" Guid="e8e61c72-3c84-4af5-9da0-9b61fb186c22" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='#*' title='Segurança SAPGUI' idx='*' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="1">
+          <Target CVScreenId="aea3328a-b61e-453c-a225-c25d91d3d97e" CvElementArea="105, 145, 77, 25" CvTextArea="122, 151, 43, 14" CvTextArgument="Rejeitar" CvType="Button" DesignTimeRectangle="105, 145, 77, 25" ElementType="Button" Guid="4e058626-98ea-4dfc-b1ce-824684bdbbeb" SearchSteps="CV" TargetType="ComputerVisionBased" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="616d67451713c213f188491020c1c391.png" xmlns="">07ZaLnpPrxU-hp0G4KN4DtA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

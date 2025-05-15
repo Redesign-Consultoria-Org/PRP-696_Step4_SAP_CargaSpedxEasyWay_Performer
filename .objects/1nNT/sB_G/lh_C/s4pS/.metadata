@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Períodos de comparação",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "s4pSi0gJaE6B3mKM65Dj1Q",
+  "Reference": "lg5H7izgS0qA3fwFs2FUbQ/s4pSi0gJaE6B3mKM65Dj1Q",
+  "ParentRef": "lg5H7izgS0qA3fwFs2FUbQ/lh_CWDkbS0mUGvOlTpI-xA",
+  "Created": "2025-05-12T19:30:14.936186Z",
+  "Updated": "2025-05-12T19:30:14.936186Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.10.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Estrutura Balanço CCR -…",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "60JSU4TRUUmh-_Hwp-tZvw",
+  "Reference": "lg5H7izgS0qA3fwFs2FUbQ/60JSU4TRUUmh-_Hwp-tZvw",
+  "ParentRef": "lg5H7izgS0qA3fwFs2FUbQ/lh_CWDkbS0mUGvOlTpI-xA",
+  "Created": "2025-05-13T13:22:48.8448684Z",
+  "Updated": "2025-05-13T13:22:48.8448684Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.10.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

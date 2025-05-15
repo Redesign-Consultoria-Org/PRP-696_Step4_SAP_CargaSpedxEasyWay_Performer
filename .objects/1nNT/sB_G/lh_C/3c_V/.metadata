@@ -1,0 +1,14 @@
+﻿{
+  "Name": "export.XLSX",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "3c_VyCPcC0uq0C5L-FVFYw",
+  "Reference": "lg5H7izgS0qA3fwFs2FUbQ/3c_VyCPcC0uq0C5L-FVFYw",
+  "ParentRef": "lg5H7izgS0qA3fwFs2FUbQ/lh_CWDkbS0mUGvOlTpI-xA",
+  "Created": "2025-05-13T13:26:14.6105271Z",
+  "Updated": "2025-05-13T13:26:14.6105271Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.10.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,190 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="testesDiversos" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1452,1051" sap2010:WorkflowViewState.IdRef="testesDiversos_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ucas="clr-namespace:UiPath.Core.Activities.SAP;assembly=UiPath.UiAutomation.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Services.RuntimeAnalyze</x:String>
+      <x:String>UiPath.Core.Activities.SAP</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="testesDiversos" sap:VirtualizedContainerService.HintSize="610,986" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="BalançoC.L&amp;P(1)" sap:VirtualizedContainerService.HintSize="548,898" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="9f8dc36f-e417-4e2c-824b-e9da12faaa41" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="514,584" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NSAPSelectMenuItem DisplayName="Select Menu Item" sap:VirtualizedContainerService.HintSize="452,119" sap2010:WorkflowViewState.IdRef="NSAPSelectMenuItem_1" Item="Lista/Exportar/Planilha eletrônica..." ScopeIdentifier="9f8dc36f-e417-4e2c-824b-e9da12faaa41" Version="V4">
+              <uix:NSAPSelectMenuItem.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" FullSelectorArgument="[Nothing]" Guid="b20868f1-36f0-4625-b0bf-2aac5ae9d105" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Balanço/C.L&amp;amp;P' /&gt;" SearchSteps="Selector" />
+              </uix:NSAPSelectMenuItem.Target>
+            </uix:NSAPSelectMenuItem>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="452,375" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,271" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ucas:SelectMenuItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" AlterIfDisabled="True" DisplayName="Select Menu Item 'saplogon.exe  Balanço/C...'" sap:VirtualizedContainerService.HintSize="354,183" sap2010:WorkflowViewState.IdRef="SelectMenuItem_1" Item="Lista/Exportar/Planilha eletrônica...">
+                    <ucas:SelectMenuItem.Items>
+                      <scg:List x:TypeArguments="x:String" Capacity="50">
+                        <x:String>Ir para/Chamar relatório...</x:String>
+                        <x:String>Ir para/Voltar</x:String>
+                        <x:String>Visões/SAP List Viewer</x:String>
+                        <x:String>Visões/Microsoft Excel</x:String>
+                        <x:String>Visões/Lotus 1-2-3</x:String>
+                        <x:String>Visões/Gráfico</x:String>
+                        <x:String>Configurações/Determinar lista expandida de totais...</x:String>
+                        <x:String>Configurações/Atrib.relatório...</x:String>
+                        <x:String>Sistema/Janela GUI nova</x:String>
+                        <x:String>Sistema/Fechar janela GUI</x:String>
+                        <x:String>Sistema/Serviços para objeto</x:String>
+                        <x:String>Sistema/Ordens spool próprias</x:String>
+                        <x:String>Sistema/Jobs próprios</x:String>
+                        <x:String>Sistema/Mensagem breve</x:String>
+                        <x:String>Sistema/Status...</x:String>
+                        <x:String>Sistema/Efetuar logoff</x:String>
+                        <x:String>Ajuda/Ajuda para aplicação</x:String>
+                        <x:String>Ajuda/Biblioteca SAP</x:String>
+                        <x:String>Ajuda/Glossário</x:String>
+                        <x:String>Ajuda/Infos de release</x:String>
+                        <x:String>Ajuda/SAP Service Marketplace</x:String>
+                        <x:String>Ajuda/Entrar mensagem do Service Desk</x:String>
+                        <x:String>Ajuda/Configurações...</x:String>
+                        <x:String>Lista/Exportar/Processamento de texto...</x:String>
+                        <x:String>Lista/Exportar/Planilha eletrônica...</x:String>
+                        <x:String>Lista/Exportar/File local...</x:String>
+                        <x:String>Lista/Exportar/Arquivo ampliado do SAP Query</x:String>
+                        <x:String>Lista/Exportar/Exportação XML...</x:String>
+                        <x:String>Lista/Enviar a/Destinatário do e-mail</x:String>
+                        <x:String>Lista/Enviar a/Pasta</x:String>
+                        <x:String>Processar/Calcular/Total</x:String>
+                        <x:String>Processar/Calcular/Valor médio</x:String>
+                        <x:String>Processar/Calcular/Mínimo</x:String>
+                        <x:String>Processar/Calcular/Máximo</x:String>
+                        <x:String>Processar/Calcular/Contar</x:String>
+                        <x:String>Configurações/Layout/Modificar...</x:String>
+                        <x:String>Configurações/Layout/Selecionar...</x:String>
+                        <x:String>Configurações/Layout/Gravar...</x:String>
+                        <x:String>Configurações/Layout/Administração de layouts</x:String>
+                        <x:String>Configurações/Colunas/Largura otimizada</x:String>
+                        <x:String>Configurações/Colunas/Fixar até coluna</x:String>
+                        <x:String>Configurações/Colunas/Anular fixação</x:String>
+                        <x:String>Sistema/Especificações do usuário/Manter dados</x:String>
+                        <x:String>Sistema/Especificações do usuário/Definir dados</x:String>
+                        <x:String>Sistema/Especificações do usuário/Eliminar dados</x:String>
+                        <x:String>Sistema/Especificações do usuário/Dados próprios</x:String>
+                        <x:String>Sistema/Especificações do usuário/Ampliar favoritos</x:String>
+                        <x:String>Sistema/Serviços/Reporting</x:String>
+                        <x:String>Sistema/Serviços/QuickViewer</x:String>
+                        <x:String>Sistema/Serviços/Controle de saída</x:String>
+                      </scg:List>
+                    </ucas:SelectMenuItem.Items>
+                    <ucas:SelectMenuItem.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="7a01f0e8-4f39-427a-b355-9c39fb0d9ed2" InformativeScreenshot="97bea992c829b64bb91f92a608821728">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ucas:SelectMenuItem.Target>
+                  </ucas:SelectMenuItem>
+                </Sequence>
+              </ui:CommentOut.Body>
+            </ui:CommentOut>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1936, 1056" ContentHash="26OorlcHh0qCgfPWEpABaQ" FilePath="D:\Program Files\SAP\FrontEnd\SAPgui\saplogon.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE1SURBVFhHY/j//z/jQOJRB4w6YNQBA+8Ap5rV7E7Vqw8OCK5ZU8jgVL2GE8j4PwB4rXPtGsGBcgDIcmFIFNDfAXDLwQ44dOqipWP16v+O1auohFcDLQFhwpaDHfD20/fP9198/E8NvPf8vf9+DTBHELYc7ID3X37+pwY+e/Pxf7+K2f/tShdhcwBWy6nmgAu3n/73Lp3x37Z4AbYoWA+0XBCb5SBMsQPOAy33LJ72365kITafr3epW4vTchCmyAEgn3uWTIdavgrZ4r/EWA7CDA+evy1tW7Lvf8uiXSTi3f99yoFxToHlIMxglTuD075i2X/78qUkY4fK5ejBDrbcuQ53nKNjahZEUJ8TbzkIU8sBJPschqnlAKLjHB1TXh3XrJlJruUgPNoiGnXAqANGugP+MwIA+QFnw3tJZtEAAAAASUVORK5CYII=" InformativeScreenshot="5c64a96754482f88a758b3b2edf130c1.png" Reference="lg5H7izgS0qA3fwFs2FUbQ/_oZ6sTZf3k6lpSofk22zBg" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Balanço/C.L&amp;amp;P' /&gt;" Title="Balanço/C.L&amp;P" Version="V1" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

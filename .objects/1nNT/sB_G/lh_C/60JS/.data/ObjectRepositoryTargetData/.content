@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="YbVRRa17B0uz1VBTyKOanA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" CVScreenId="88e4cb6c-2b41-4dbd-bdc9-03c58a21174f" CvTextArea="7, 11, 469, 22" CvTextArgument="Estrutura Balanço CCR - Novo Plano de Contas" CvType="Text" DesignTimeRectangle="8, 8, 466, 27" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SPAN' type='' class='HEADING' aaname='Estrutura Balanço CCR - Novo Plano de Contas' check:text='Estrutura Balanço CCR - Novo Plano de Contas' /&gt;" Guid="027a25d2-3a63-4789-a75c-fc575905f6fc" ScopeSelectorArgument="&lt;html app='saplogon.exe' url='*' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="7465fc1822936d6ff7166f213c41da4d.png" xmlns="">0ajA-N-WsbUGN9g3msWsEuA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
