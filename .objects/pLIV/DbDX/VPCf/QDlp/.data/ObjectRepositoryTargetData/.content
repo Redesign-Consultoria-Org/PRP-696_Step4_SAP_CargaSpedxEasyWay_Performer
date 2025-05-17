@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="0FI1MCSmLkm-FycUJFNT6Q" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" CVScreenId="67396529-c55b-45ea-978a-5b3051747e74" CvElementArea="251, 51, 76, 24" CvTextArea="280, 55, 17, 12" CvTextArgument="OK" CvType="Button" DesignTimeRectangle="251, 51, 76, 24" DesignTimeScaleFactor="1" ElementType="Button" Guid="04d4d37a-adf0-4386-b4e3-d6e0bf02d9e4" ImageBase64="" ScopeSelectorArgument="&lt;wnd app='mstsc.exe' cls='RAIL_WINDOW' title='Export*' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="67396529-c55b-45ea-978a-5b3051747e74" CvTextArea="150, 8, 44, 17" CvTextArgument="Export" CvType="Text" DesignTimeRectangle="150, 8, 44, 17" ElementType="Text" Guid="370bec87-1e85-4b73-8b8b-57d5a151ec87" SearchSteps="CV" TargetType="ComputerVisionBased" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="970e4a46aee9fbfebaae51e503762fbc.png" xmlns="">0vu33qr5myk-7k2_CDodGHg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

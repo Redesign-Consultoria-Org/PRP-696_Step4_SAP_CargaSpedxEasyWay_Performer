@@ -88,6 +88,20 @@
         "testCaseType": "TestCase",
         "executionTemplateType": "Local",
         "fileName": "Tests\\WorkflowTestCaseTemplate.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "05ee1379-09d3-4245-b999-f2fdcd8475c5",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Tests\\TestCase Login.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "11484df9-27b6-4b1d-bd6e-74608de96018",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Tests\\TestCase Navigate Balance Sheet.xaml"
       }
     ],
     "saveToCloud": false

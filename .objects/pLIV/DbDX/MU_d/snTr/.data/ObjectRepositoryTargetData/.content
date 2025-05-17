@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="RXPe3qXcskqctuwgJ4Y3fw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" CVScreenId="72bea7f2-f86c-40a9-9d70-4d4af51def29" CvElementArea="96, 127, 89, 27" CvTextArea="130, 133, 21, 12" CvTextArgument="Yes" CvType="Button" DesignTimeRectangle="96, 127, 89, 27" DesignTimeScaleFactor="1" ElementType="Button" Guid="39281454-aa51-46e9-a1ff-9b57f02ac4f7" ImageBase64="" ScopeSelectorArgument="&lt;wnd app='mstsc.exe' cls='RAIL_WINDOW' title='Responda*' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="72bea7f2-f86c-40a9-9d70-4d4af51def29" CvElementArea="193, 127, 90, 27" CvTextArea="229, 133, 17, 12" CvTextArgument="No" CvType="Button" DesignTimeRectangle="193, 127, 90, 27" ElementType="Button" Guid="2bb2f900-3399-4b11-bbea-7370b127a1dd" SearchSteps="CV" TargetType="ComputerVisionBased" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="0dd2eb2b4c9bee1f07cbbb14624c3a2a.png" xmlns="">0sV4JOhCSSUymhmA8ntn4Zw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
