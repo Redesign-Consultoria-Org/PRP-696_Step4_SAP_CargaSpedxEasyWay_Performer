@@ -118,12 +118,15 @@
       <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="BalanceSheet" sap:VirtualizedContainerService.HintSize="512,224" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="WorkFlow responsável por  preencher os campos antes de extrair o Excel&#xD;&#xA; - Preenche empresa&#xD;&#xA; - Preeche mes e ano inicial&#xD;&#xA; - preenche mes e ano final&#xD;&#xA; - clica em imprimir" DisplayName="BalanceSheet" sap:VirtualizedContainerService.HintSize="512,729" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message balancet inf start" sap:VirtualizedContainerService.HintSize="450,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Iniciando preenchimento de tela balancete&quot;]" />
     <Sequence sap2010:Annotation.AnnotationText="Normaliza os dados de entrada para inputs no sistema" DisplayName="Normalize Data" sap:VirtualizedContainerService.HintSize="450,88" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -149,14 +152,14 @@
         </Assign.Value>
       </Assign>
     </Sequence>
-    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" Server="{x:Null}" ApiKey="lMRuF0JXCDWxC4oxjXhJlchPzQJfByg8hFeFDlO0eqLVOIULcWnkHaKES96mze3wbTJoLrzZtV02BFi/4U+bTg==" CvMethod="ElementDetection, OCR" DesignTimeCacheId="f9d5e717-845d-4ba0-af1b-0863e4e2028a" DisplayName="CV Screen Scope 'Balance sheet'" sap:VirtualizedContainerService.HintSize="450,48" sap2010:WorkflowViewState.IdRef="CVScope_1" SendOnPremData="False" Version="V6">
+    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" Server="{x:Null}" sap2010:Annotation.AnnotationText="Por se tratar de um ambiente virtualizado, é necessário usar visão computacional para mapear os elementos." ApiKey="lMRuF0JXCDWxC4oxjXhJlchPzQJfByg8hFeFDlO0eqLVOIULcWnkHaKES96mze3wbTJoLrzZtV02BFi/4U+bTg==" CvMethod="ElementDetection, OCR" DesignTimeCacheId="f9d5e717-845d-4ba0-af1b-0863e4e2028a" DisplayName="CV Screen Scope 'Balance sheet'" sap:VirtualizedContainerService.HintSize="450,129" sap2010:WorkflowViewState.IdRef="CVScope_1" SendOnPremData="False" Version="V6">
       <p:CVScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
           </ActivityAction.Argument>
           <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_2">
-            <ui:Activate DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Activate 'BalanceSheet'" sap:VirtualizedContainerService.HintSize="415,139" sap2010:WorkflowViewState.IdRef="Activate_1">
+            <ui:Activate DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Activate 'BalanceSheet'" sap:VirtualizedContainerService.HintSize="400,139" sap2010:WorkflowViewState.IdRef="Activate_1">
               <ui:Activate.Target>
                 <ui:Target Element="{x:Null}" Id="6aa822e1-e71b-49a0-a9b0-5bafe5f28c62" InformativeScreenshot="3b661022da7318bde32a5323a855c766" Selector="&lt;wnd aaname='Easy-SPED-Contábil*' app='mstsc.exe' cls='RAIL_WINDOW' title='Easy-SPED-Contábil*' /&gt;">
                   <ui:Target.ClippingRegion>
@@ -171,7 +174,7 @@
                 </ui:Target>
               </ui:Activate.Target>
             </ui:Activate>
-            <p:CvTypeIntoWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (25,100,74,21)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Empresa' (25,89,45,13)&quot;]" DesignTimeCacheId="f9d5e717-845d-4ba0-af1b-0863e4e2028a" DesignTimeScaleFactor="1" DisplayName="CV Type Into - Empresa" EmptyField="True" sap:VirtualizedContainerService.HintSize="415,217" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_2" InformativeScreenshot="eee7bc9312a5eb2e3a0ccf075e189b19" NumberOfScrolls="2" ScrollDirection="None" Text="[in_strEnterprise]" Version="V6">
+            <p:CvTypeIntoWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (25,100,74,21)&quot; +&#xA;&quot;Anchor: Text 'Empresa' (25,89,45,13)&quot;]" DesignTimeCacheId="f9d5e717-845d-4ba0-af1b-0863e4e2028a" DesignTimeScaleFactor="1" DisplayName="CV Type Into - Empresa" EmptyField="True" sap:VirtualizedContainerService.HintSize="400,217" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_2" InformativeScreenshot="eee7bc9312a5eb2e3a0ccf075e189b19" NumberOfScrolls="2" ScrollDirection="None" Text="[in_strEnterprise]" Version="V6">
               <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
                 <uc:CvDescriptor Id="56a72b8c-66ec-4464-896b-3db2bd3be77d">
                   <uc:CvDescriptor.Anchors>
@@ -195,7 +198,7 @@
                 </ui:Target>
               </p:CvTypeIntoWithDescriptor.Target>
             </p:CvTypeIntoWithDescriptor>
-            <p:CvTypeIntoWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (439,100,75,21)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Ano' (438,89,21,11)&quot;]" DesignTimeCacheId="f9d5e717-845d-4ba0-af1b-0863e4e2028a" DesignTimeScaleFactor="1" DisplayName="CV Type Into - Ano" EmptyField="True" sap:VirtualizedContainerService.HintSize="415,217" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_5" InformativeScreenshot="b685eb6cbd9e880adabd379bfaab588d" NumberOfScrolls="2" ScrollDirection="None" Text="[in_strYear]" Version="V6">
+            <p:CvTypeIntoWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (439,100,75,21)&quot; +&#xA;&quot;Anchor: Text 'Ano' (438,89,21,11)&quot;]" DesignTimeCacheId="f9d5e717-845d-4ba0-af1b-0863e4e2028a" DesignTimeScaleFactor="1" DisplayName="CV Type Into - Ano" EmptyField="True" sap:VirtualizedContainerService.HintSize="400,217" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_5" InformativeScreenshot="b685eb6cbd9e880adabd379bfaab588d" NumberOfScrolls="2" ScrollDirection="None" Text="[in_strYear]" Version="V6">
               <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
                 <uc:CvDescriptor Id="0521f0b7-bbe7-4f2d-9df0-801fa6afc084">
                   <uc:CvDescriptor.Anchors>
@@ -219,7 +222,7 @@
                 </ui:Target>
               </p:CvTypeIntoWithDescriptor.Target>
             </p:CvTypeIntoWithDescriptor>
-            <p:CvTypeIntoWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (522,100,49,21)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Periodo' (521,89,40,12)&quot;]" DesignTimeCacheId="f9d5e717-845d-4ba0-af1b-0863e4e2028a" DesignTimeScaleFactor="1" DisplayName="CV Type Into - Periodo" EmptyField="True" sap:VirtualizedContainerService.HintSize="415,217" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_1" InformativeScreenshot="6481a3167775a489c2dee2de916e79ab" NumberOfScrolls="2" ScrollDirection="None" Text="[&quot;1&quot;]" Version="V6">
+            <p:CvTypeIntoWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (522,100,49,21)&quot; +&#xA;&quot;Anchor: Text 'Periodo' (521,89,40,12)&quot;]" DesignTimeCacheId="f9d5e717-845d-4ba0-af1b-0863e4e2028a" DesignTimeScaleFactor="1" DisplayName="CV Type Into - Periodo" EmptyField="True" sap:VirtualizedContainerService.HintSize="400,217" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_1" InformativeScreenshot="6481a3167775a489c2dee2de916e79ab" NumberOfScrolls="2" ScrollDirection="None" Text="[&quot;1&quot;]" Version="V6">
               <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
                 <uc:CvDescriptor Id="73b4f35c-cdfb-41ff-a471-735503cabd28">
                   <uc:CvDescriptor.Anchors>
@@ -243,7 +246,7 @@
                 </ui:Target>
               </p:CvTypeIntoWithDescriptor.Target>
             </p:CvTypeIntoWithDescriptor>
-            <p:CvTypeIntoWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (577,100,59,23)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Mês / Ano' (576,89,51,11)&quot;]" DesignTimeCacheId="f9d5e717-845d-4ba0-af1b-0863e4e2028a" DesignTimeScaleFactor="1" DisplayName="CV Type Into - AnoMes" EmptyField="True" sap:VirtualizedContainerService.HintSize="415,217" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_4" InformativeScreenshot="aad44f30e49768432a55599cc949358b" NumberOfScrolls="2" ScrollDirection="None" Text="[in_strMonthAndYear + &quot;[k(tab)]&quot;]" Version="V6">
+            <p:CvTypeIntoWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (577,100,59,23)&quot; +&#xA;&quot;Anchor: Text 'Mês / Ano' (576,89,51,11)&quot;]" DesignTimeCacheId="f9d5e717-845d-4ba0-af1b-0863e4e2028a" DesignTimeScaleFactor="1" DisplayName="CV Type Into - AnoMes" EmptyField="True" sap:VirtualizedContainerService.HintSize="400,217" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_4" InformativeScreenshot="aad44f30e49768432a55599cc949358b" NumberOfScrolls="2" ScrollDirection="None" Text="[in_strMonthAndYear + &quot;[k(tab)]&quot;]" Version="V6">
               <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
                 <uc:CvDescriptor Id="0381a668-3d8c-4508-ab3b-d7bfd78af0be">
                   <uc:CvDescriptor.Anchors>
@@ -267,7 +270,7 @@
                 </ui:Target>
               </p:CvTypeIntoWithDescriptor.Target>
             </p:CvTypeIntoWithDescriptor>
-            <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Text 'Imprimir' (204,586,37,13)&quot; +&#xD;&#xA;&quot;Anchor: Button (172,579,82,27)&quot;]" DesignTimeCacheId="f9d5e717-845d-4ba0-af1b-0863e4e2028a" DesignTimeScaleFactor="1" DisplayName="CV Click - Imprimir" sap:VirtualizedContainerService.HintSize="415,217" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_1" InformativeScreenshot="049cdf3c685ba72282c6dac43abf4500" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
+            <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Text 'Imprimir' (204,586,37,13)&quot; +&#xA;&quot;Anchor: Button (172,579,82,27)&quot;]" DesignTimeCacheId="f9d5e717-845d-4ba0-af1b-0863e4e2028a" DesignTimeScaleFactor="1" DisplayName="CV Click - Imprimir" sap:VirtualizedContainerService.HintSize="400,217" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_1" InformativeScreenshot="049cdf3c685ba72282c6dac43abf4500" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
               <p:CvClickWithDescriptor.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -301,7 +304,7 @@
                 </ui:Target>
               </p:CvClickWithDescriptor.Target>
             </p:CvClickWithDescriptor>
-            <uix:NCheckState DisplayName="Check App State 'Verifica se aparece pop up de desatualizado'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="415,57" sap2010:WorkflowViewState.IdRef="NCheckState_1" Version="V4">
+            <uix:NCheckState DisplayName="Check App State 'Verifica se aparece pop up de desatualizado'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="400,57" sap2010:WorkflowViewState.IdRef="NCheckState_1" Version="V4">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,298" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
@@ -309,7 +312,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Text 'Yes' (498,416,20,12)&quot; +&#xD;&#xA;&quot;Anchor: Button (465,409,90,27)&quot;]" DesignTimeCacheId="3438885c-70a6-46f3-97eb-c94da960c63a" DesignTimeScaleFactor="1" DisplayName="CV Click - Yes" sap:VirtualizedContainerService.HintSize="388,210" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_2" InformativeScreenshot="344840275f5f1905c0f074147cc30be7" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
+                  <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Text 'Yes' (498,416,20,12)&quot; +&#xA;&quot;Anchor: Button (465,409,90,27)&quot;]" DesignTimeCacheId="3438885c-70a6-46f3-97eb-c94da960c63a" DesignTimeScaleFactor="1" DisplayName="CV Click - Yes" sap:VirtualizedContainerService.HintSize="388,210" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_2" InformativeScreenshot="344840275f5f1905c0f074147cc30be7" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
                     <p:CvClickWithDescriptor.CursorPosition>
                       <ui:CursorPosition Position="Center">
                         <ui:CursorPosition.OffsetX>
@@ -357,7 +360,7 @@
               <uix:NCheckState.Target>
                 <uix:TargetAnchorable CVScreenId="72bea7f2-f86c-40a9-9d70-4d4af51def29" ContentHash="RXPe3qXcskqctuwgJ4Y3fw" CvElementArea="96, 127, 89, 27" CvTextArea="130, 133, 21, 12" CvTextArgument="Yes" CvType="Button" DesignTimeRectangle="96, 127, 89, 27" DesignTimeScaleFactor="1" ElementType="Button" Guid="39281454-aa51-46e9-a1ff-9b57f02ac4f7" ImageBase64="" InformativeScreenshot="0dd2eb2b4c9bee1f07cbbb14624c3a2a.png" Reference="lg5H7izgS0qA3fwFs2FUbQ/snTrTXTiL0K6JQRPHTNLmg" ScopeSelectorArgument="&lt;wnd app='mstsc.exe' cls='RAIL_WINDOW' title='Responda*' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target CVScreenId="72bea7f2-f86c-40a9-9d70-4d4af51def29" CvElementArea="193, 127, 90, 27" CvTextArea="229, 133, 17, 12" CvTextArgument="No" CvType="Button" DesignTimeRectangle="193, 127, 90, 27" ElementType="Button" Guid="2bb2f900-3399-4b11-bbea-7370b127a1dd" SearchSteps="CV" TargetType="ComputerVisionBased" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -370,7 +373,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NCheckState>
-            <Delay DisplayName="Delay aguarda carregamento" Duration="00:00:00.0030000" sap:VirtualizedContainerService.HintSize="415,57" sap2010:WorkflowViewState.IdRef="Delay_1">
+            <Delay DisplayName="Delay aguarda carregamento" Duration="00:00:00.0030000" sap:VirtualizedContainerService.HintSize="400,57" sap2010:WorkflowViewState.IdRef="Delay_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -378,7 +381,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </Delay>
-            <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Icon (53,60,19,19)&quot;]" DesignTimeCacheId="94ac713f-9c7a-45cb-8427-f75d9c5b9f88" DesignTimeScaleFactor="1" DisplayName="CV Click - Export Report" sap:VirtualizedContainerService.HintSize="415,217" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_3" InformativeScreenshot="96e3154a08478704a96e44dab710a107" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
+            <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Icon (53,60,19,19)&quot;]" DesignTimeCacheId="94ac713f-9c7a-45cb-8427-f75d9c5b9f88" DesignTimeScaleFactor="1" DisplayName="CV Click - Export Report" sap:VirtualizedContainerService.HintSize="400,217" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_3" InformativeScreenshot="96e3154a08478704a96e44dab710a107" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
               <p:CvClickWithDescriptor.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -407,15 +410,15 @@
                 </ui:Target>
               </p:CvClickWithDescriptor.Target>
             </p:CvClickWithDescriptor>
-            <uix:NCheckState DisplayName="Check App State 'Verifica se aparece Export'" sap:VirtualizedContainerService.HintSize="415,57" sap2010:WorkflowViewState.IdRef="NCheckState_2" Version="V4">
+            <uix:NCheckState DisplayName="Check App State 'Verifica se aparece Export'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="400,57" sap2010:WorkflowViewState.IdRef="NCheckState_2" Version="V4">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,298" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,300" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <p:CvSelectItemWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" InRegion="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (368,346,195,20)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Format:' (367,328,36,12)&quot;]" DesignTimeCacheId="1918c334-b05f-4707-ae55-c64eff155c65" DesignTimeScaleFactor="1" DisplayName="CV Dropdown Select - Excel 8.0 (XLS) (Extend)" EmptyField="False" sap:VirtualizedContainerService.HintSize="388,210" sap2010:WorkflowViewState.IdRef="CvSelectItemWithDescriptor_1" InformativeScreenshot="e5a58150e3cbd9d5a97daaa2e686cc2c" NumberOfScrolls="2" ScrollDirection="None" Text="[&quot;Excel 8.0 (XLS) (Extend)”]" Version="V6">
+                  <p:CvSelectItemWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" InRegion="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (368,346,195,20)&quot; +&#xA;&quot;Anchor: Text 'Format:' (367,328,36,12)&quot;]" DesignTimeCacheId="1918c334-b05f-4707-ae55-c64eff155c65" DesignTimeScaleFactor="1" DisplayName="CV Dropdown Select - Excel 8.0 (XLS) (Extend)" EmptyField="False" sap:VirtualizedContainerService.HintSize="388,210" sap2010:WorkflowViewState.IdRef="CvSelectItemWithDescriptor_1" InformativeScreenshot="e5a58150e3cbd9d5a97daaa2e686cc2c" NumberOfScrolls="2" ScrollDirection="None" Text="[&quot;Excel 8.0 (XLS) (Extend)”]" Version="V6">
                     <p:CvSelectItemWithDescriptor.DesignTimeDescriptor>
                       <uc:CvDescriptor Id="b158d0fe-0d81-4ecd-97dd-5ee242a4bc3d">
                         <uc:CvDescriptor.Anchors>
@@ -459,7 +462,7 @@
               <uix:NCheckState.Target>
                 <uix:TargetAnchorable CVScreenId="67396529-c55b-45ea-978a-5b3051747e74" ContentHash="0FI1MCSmLkm-FycUJFNT6Q" CvElementArea="251, 51, 76, 24" CvTextArea="280, 55, 17, 12" CvTextArgument="OK" CvType="Button" DesignTimeRectangle="251, 51, 76, 24" DesignTimeScaleFactor="1" ElementType="Button" Guid="04d4d37a-adf0-4386-b4e3-d6e0bf02d9e4" ImageBase64="" InformativeScreenshot="970e4a46aee9fbfebaae51e503762fbc.png" Reference="lg5H7izgS0qA3fwFs2FUbQ/QDlpqoUSLU67WapGhduSZg" ScopeSelectorArgument="&lt;wnd app='mstsc.exe' cls='RAIL_WINDOW' title='Export*' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target CVScreenId="67396529-c55b-45ea-978a-5b3051747e74" CvTextArea="150, 8, 44, 17" CvTextArgument="Export" CvType="Text" DesignTimeRectangle="150, 8, 44, 17" ElementType="Text" Guid="370bec87-1e85-4b73-8b8b-57d5a151ec87" SearchSteps="CV" TargetType="ComputerVisionBased" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -472,7 +475,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NCheckState>
-            <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Text 'OK' (622,337,17,12)&quot; +&#xD;&#xA;&quot;Anchor: Button (593,332,76,24)&quot;]" DesignTimeCacheId="43d78ee8-e5f1-48ef-9cdc-898558ae154e" DesignTimeScaleFactor="1" DisplayName="CV Click - ok" sap:VirtualizedContainerService.HintSize="415,208" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_4" InformativeScreenshot="6d363ea9398add11e68176875c934227" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
+            <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Text 'OK' (622,337,17,12)&quot; +&#xA;&quot;Anchor: Button (593,332,76,24)&quot;]" DesignTimeCacheId="43d78ee8-e5f1-48ef-9cdc-898558ae154e" DesignTimeScaleFactor="1" DisplayName="CV Click - ok" sap:VirtualizedContainerService.HintSize="400,208" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_4" InformativeScreenshot="6d363ea9398add11e68176875c934227" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
               <p:CvClickWithDescriptor.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -509,10 +512,13 @@
           </Sequence>
         </ActivityAction>
       </p:CVScope.Body>
+      <p:CVScope.DesignTimeCache>
+        <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" DataSent="False" />
+      </p:CVScope.DesignTimeCache>
       <p:CVScope.DesignTimeCacheContainer>
         <uc:CvCacheContainer>
           <uc:CvCacheContainer.Caches>
-            <scg:List x:TypeArguments="uc:CVCache" Capacity="10">
+            <scg:List x:TypeArguments="uc:CVCache" Capacity="5">
               <uc:CVCache DataSent="False" DisplayName="Screen CV Type Into - '0100' (Main)" Id="f9d5e717-845d-4ba0-af1b-0863e4e2028a" InformativeScreenshot="40d090e55759d58fd43519fc02676d1f" LogicalPosition="446, 177" OcrText="Easy-SPED-Contábil - Versão 1.25 - Produção - [Rpa.Cargasped] _ X Cadastros Movimentos Relatórios Especiais Utilitários Ajuda Balancete X Empresa Ano Periodo Mês / Ano 0100 CCR S.A. / Tipo do Plano de Contas Contábeis Tipo do Plano de Centros de Custos Tipo do Relatório Contas/C. Custos a serem Impressos Conta Ctb. C. Custo Filial/Conta Filial/C.Custo Analitica Sintética Todas Filial Inicial Filial Final Conta Contábil Inicial ... Conta Contábil Final ... ... Centro de Custo Inicial ... Centro de Custo Final ... Opções para Emissão Imprimir Contas / Centros de Custos até o Grau: 006 Quebrar página a cada Conta de 1° grau Imprimir Valores Antes do Encerramento do Exercício Imprimir Valores Antes da Troca de Plano Considerar como Último Encerramento Mês / Ano do Encerramento / Imprimir Contas s/ C. Custo Imprimir Contas sem Movimento Emitir Quadro de Resumo Código da Conta Não Por Contas de 1° Grau Por Grupo de Contas Estruturado Ambos Interno DBF CSV Configurar Imprimir Visualizar Ajuda E-mail" Position="446, 177" ScreenshotGuid="e9dc3f23-6a74-4dff-9532-f9f040d63113" ServerVersion="24.10.5.1">
                 <uc:CVCache.CvAnchorRelations>
                   <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="64">
@@ -2360,8 +2366,10 @@
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </p:CVScope>
+    <ui:LogMessage DisplayName="Log Message balancete inf end" sap:VirtualizedContainerService.HintSize="450,164" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Preenchimento de tela balancete finalizado&quot;]" />
   </Sequence>
 </Activity>

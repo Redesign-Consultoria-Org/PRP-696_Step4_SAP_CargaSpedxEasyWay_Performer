@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="testesDiversos" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1452,1051" sap2010:WorkflowViewState.IdRef="testesDiversos_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ucas="clr-namespace:UiPath.Core.Activities.SAP;assembly=UiPath.UiAutomation.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="testesDiversos" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1140,564" sap2010:WorkflowViewState.IdRef="testesDiversos_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:c="clr-namespace:CCR_RPA_SAP_Activities;assembly=CCR.RPA.SAP.Activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ucas="clr-namespace:UiPath.Core.Activities.SAP;assembly=UiPath.UiAutomation.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -37,6 +37,15 @@
       <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
       <x:String>UiPath.UIAutomationNext.Activities.Services.RuntimeAnalyze</x:String>
       <x:String>UiPath.Core.Activities.SAP</x:String>
+      <x:String>CCR_RPA_SAP_Activities</x:String>
+      <x:String>System.Management.Automation</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Net</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>System.ComponentModel</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -77,15 +86,38 @@
       <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
       <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>CCR.RPA.SAP.Activities</AssemblyReference>
+      <AssemblyReference>System.Management.Automation</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Net.Primitives</AssemblyReference>
+      <AssemblyReference>System.Net.HttpListener</AssemblyReference>
+      <AssemblyReference>System.Net.WebProxy</AssemblyReference>
+      <AssemblyReference>System.Net.NameResolution</AssemblyReference>
+      <AssemblyReference>System.Net.WebClient</AssemblyReference>
+      <AssemblyReference>System.Net.Requests</AssemblyReference>
+      <AssemblyReference>System.Net.ServicePoint</AssemblyReference>
+      <AssemblyReference>System.Net.WebHeaderCollection</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="testesDiversos" sap:VirtualizedContainerService.HintSize="610,986" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="testesDiversos" sap:VirtualizedContainerService.HintSize="416,360" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="BalançoC.L&amp;P(1)" sap:VirtualizedContainerService.HintSize="548,898" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="9f8dc36f-e417-4e2c-824b-e9da12faaa41" Version="V2">
+    <c:Login sap:VirtualizedContainerService.HintSize="354,224" sap2010:WorkflowViewState.IdRef="Login_1" in_CredentialFolder="GrupoCCR" in_CredentialSapLogin="PRP-696_SAP_LOGIN" in_SapConnName="ECP" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="BalançoC.L&amp;P(1)" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="9f8dc36f-e417-4e2c-824b-e9da12faaa41" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -99,7 +131,7 @@
             </sap:WorkflowViewStateService.ViewState>
             <uix:NSAPSelectMenuItem DisplayName="Select Menu Item" sap:VirtualizedContainerService.HintSize="452,119" sap2010:WorkflowViewState.IdRef="NSAPSelectMenuItem_1" Item="Lista/Exportar/Planilha eletrônica..." ScopeIdentifier="9f8dc36f-e417-4e2c-824b-e9da12faaa41" Version="V4">
               <uix:NSAPSelectMenuItem.Target>
-                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" FullSelectorArgument="[Nothing]" Guid="b20868f1-36f0-4625-b0bf-2aac5ae9d105" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Balanço/C.L&amp;amp;P' /&gt;" SearchSteps="Selector" />
+                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" FullSelectorArgument="[Nothing]" Guid="defe93bc-1061-49ad-9646-9041a9195bef" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Balanço/C.L&amp;amp;P' /&gt;" SearchSteps="Selector" />
               </uix:NSAPSelectMenuItem.Target>
             </uix:NSAPSelectMenuItem>
             <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="452,375" sap2010:WorkflowViewState.IdRef="CommentOut_1">
@@ -185,6 +217,12 @@
       <uix:NApplicationCard.TargetApp>
         <uix:TargetApp Area="-8, -8, 1936, 1056" ContentHash="26OorlcHh0qCgfPWEpABaQ" FilePath="D:\Program Files\SAP\FrontEnd\SAPgui\saplogon.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE1SURBVFhHY/j//z/jQOJRB4w6YNQBA+8Ap5rV7E7Vqw8OCK5ZU8jgVL2GE8j4PwB4rXPtGsGBcgDIcmFIFNDfAXDLwQ44dOqipWP16v+O1auohFcDLQFhwpaDHfD20/fP9198/E8NvPf8vf9+DTBHELYc7ID3X37+pwY+e/Pxf7+K2f/tShdhcwBWy6nmgAu3n/73Lp3x37Z4AbYoWA+0XBCb5SBMsQPOAy33LJ72365kITafr3epW4vTchCmyAEgn3uWTIdavgrZ4r/EWA7CDA+evy1tW7Lvf8uiXSTi3f99yoFxToHlIMxglTuD075i2X/78qUkY4fK5ejBDrbcuQ53nKNjahZEUJ8TbzkIU8sBJPschqnlAKLjHB1TXh3XrJlJruUgPNoiGnXAqANGugP+MwIA+QFnw3tJZtEAAAAASUVORK5CYII=" InformativeScreenshot="5c64a96754482f88a758b3b2edf130c1.png" Reference="lg5H7izgS0qA3fwFs2FUbQ/_oZ6sTZf3k6lpSofk22zBg" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Balanço/C.L&amp;amp;P' /&gt;" Title="Balanço/C.L&amp;P" Version="V1" />
       </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
   </Sequence>
 </Activity>

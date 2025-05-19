@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1140,5555</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1140,820</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>VerifyFields_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -103,13 +103,15 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="VerifyFields" sap:VirtualizedContainerService.HintSize="546,5490" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Esse  workflow é responsável por garantir que a configuração da extração o excel esteja correta.&#xD;&#xA;Campos marcados antes do download:&#xD;&#xA; -Columngeadings&#xD;&#xA; -Use  worksheet functions to represent subtctal fields in report&#xD;&#xA; -Column width based in objects in area&#xD;&#xA; -Details&#xD;&#xA; - Non-Tabular" DisplayName="VerifyFields" sap:VirtualizedContainerService.HintSize="416,686" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" Server="{x:Null}" ApiKey="lMRuF0JXCDWxC4oxjXhJlchPzQJfByg8hFeFDlO0eqLVOIULcWnkHaKES96mze3wbTJoLrzZtV02BFi/4U+bTg==" CvMethod="ElementDetection, OCR" DesignTimeCacheId="a9522916-03c3-41fd-9432-f6f820cc60e7" DisplayName="CV Screen Scope 'VerifyFields" sap:VirtualizedContainerService.HintSize="484,5402" sap2010:WorkflowViewState.IdRef="CVScope_1" SendOnPremData="False" Version="V6">
+    <ui:LogMessage DisplayName="Log Message inf init verify" sap:VirtualizedContainerService.HintSize="354,173" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;Iniciando verificação de configuração do arquivo&quot;]" />
+    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" Server="{x:Null}" sap2010:Annotation.AnnotationText="Por se tratar de um ambiente virtualizado, é necessário usar visão computacional para mapear os elementos." ApiKey="lMRuF0JXCDWxC4oxjXhJlchPzQJfByg8hFeFDlO0eqLVOIULcWnkHaKES96mze3wbTJoLrzZtV02BFi/4U+bTg==" CvMethod="ElementDetection, OCR" DesignTimeCacheId="a9522916-03c3-41fd-9432-f6f820cc60e7" DisplayName="CV Screen Scope 'VerifyFields" sap:VirtualizedContainerService.HintSize="354,129" sap2010:WorkflowViewState.IdRef="CVScope_1" SendOnPremData="False" Version="V6">
       <p:CVScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -137,7 +139,7 @@
                 </ui:Target>
               </ui:Activate.Target>
             </ui:Activate>
-            <p:CvElementExistsWithDescriptor DelayScreenshotAfterScroll="{x:Null}" Descriptor="[&quot;Target: Image (39,115,18,10)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Column Headings' (58,114,85,14)&quot;]" DesignTimeCacheId="a9522916-03c3-41fd-9432-f6f820cc60e7" DesignTimeScaleFactor="1" DisplayName="CV Element Exists - Colum headings" sap:VirtualizedContainerService.HintSize="450,169" sap2010:WorkflowViewState.IdRef="CvElementExistsWithDescriptor_1" InformativeScreenshot="cc9583d4b62474eaaa69399a8e5344ce" NumberOfScrolls="2" Result="[isCheckColumHeading]" ScrollDirection="None" TimeoutMS="2000" Version="V6">
+            <p:CvElementExistsWithDescriptor DelayScreenshotAfterScroll="{x:Null}" Descriptor="[&quot;Target: Image (39,115,18,10)&quot; +&#xA;&quot;Anchor: Text 'Column Headings' (58,114,85,14)&quot;]" DesignTimeCacheId="a9522916-03c3-41fd-9432-f6f820cc60e7" DesignTimeScaleFactor="1" DisplayName="CV Element Exists - Colum headings" sap:VirtualizedContainerService.HintSize="450,169" sap2010:WorkflowViewState.IdRef="CvElementExistsWithDescriptor_1" InformativeScreenshot="cc9583d4b62474eaaa69399a8e5344ce" NumberOfScrolls="2" Result="[isCheckColumHeading]" ScrollDirection="None" TimeoutMS="2000" Version="V6">
               <p:CvElementExistsWithDescriptor.DesignTimeDescriptor>
                 <uc:CvDescriptor Id="53b47bb3-2095-4991-9fe2-ac014c0e7b2d">
                   <uc:CvDescriptor.Anchors>
@@ -151,16 +153,17 @@
                 </uc:CvDescriptor>
               </p:CvElementExistsWithDescriptor.DesignTimeDescriptor>
             </p:CvElementExistsWithDescriptor>
-            <If Condition="[Not isCheckColumHeading]" DisplayName="If verifica isCheckColumHeading" sap:VirtualizedContainerService.HintSize="450,891" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[Not isCheckColumHeading]" DisplayName="If verifica isCheckColumHeading" sap:VirtualizedContainerService.HintSize="450,220" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,469" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:LogMessage DisplayName="Log Message inf columnHeadings" sap:VirtualizedContainerService.HintSize="354,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Marcando column Heading&quot;]" />
-                  <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: CheckBox (41,114,14,14)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Column Headings' (58,114,85,14)&quot;]" DesignTimeCacheId="a9522916-03c3-41fd-9432-f6f820cc60e7" DesignTimeScaleFactor="1" DisplayName="CV Click - Colum Headings" sap:VirtualizedContainerService.HintSize="354,208" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_1" InformativeScreenshot="0e42c44db6815998c0347a247281abd3" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
+                  <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: CheckBox (41,114,14,14)&quot; +&#xA;&quot;Anchor: Text 'Column Headings' (58,114,85,14)&quot;]" DesignTimeCacheId="a9522916-03c3-41fd-9432-f6f820cc60e7" DesignTimeScaleFactor="1" DisplayName="CV Click - Colum Headings" sap:VirtualizedContainerService.HintSize="354,208" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_1" InformativeScreenshot="0e42c44db6815998c0347a247281abd3" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
                     <p:CvClickWithDescriptor.CursorPosition>
                       <ui:CursorPosition Position="Center">
                         <ui:CursorPosition.OffsetX>
@@ -197,17 +200,18 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,252" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:LogMessage DisplayName="Log Message Colum headins end check" sap:VirtualizedContainerService.HintSize="354,164" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Column heand marcado&quot;]" />
                 </Sequence>
               </If.Else>
             </If>
-            <p:CvElementExistsWithDescriptor DelayScreenshotAfterScroll="{x:Null}" Descriptor="[&quot;Target: Image (41,137,14,12)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Use worksheet functions to represent subtotal fields in report' (58,137,286,14)&quot;]" DesignTimeCacheId="a9522916-03c3-41fd-9432-f6f820cc60e7" DesignTimeScaleFactor="1" DisplayName="CV Element Exists - UseWorkSheet" sap:VirtualizedContainerService.HintSize="450,169" sap2010:WorkflowViewState.IdRef="CvElementExistsWithDescriptor_2" InformativeScreenshot="b990b6946cdd0de552f92991f59cc8f5" NumberOfScrolls="2" Result="[isUseWorkSheet]" ScrollDirection="None" TimeoutMS="2000" Version="V6">
+            <p:CvElementExistsWithDescriptor DelayScreenshotAfterScroll="{x:Null}" Descriptor="[&quot;Target: Image (41,137,14,12)&quot; +&#xA;&quot;Anchor: Text 'Use worksheet functions to represent subtotal fields in report' (58,137,286,14)&quot;]" DesignTimeCacheId="a9522916-03c3-41fd-9432-f6f820cc60e7" DesignTimeScaleFactor="1" DisplayName="CV Element Exists - UseWorkSheet" sap:VirtualizedContainerService.HintSize="450,169" sap2010:WorkflowViewState.IdRef="CvElementExistsWithDescriptor_2" InformativeScreenshot="b990b6946cdd0de552f92991f59cc8f5" NumberOfScrolls="2" Result="[isUseWorkSheet]" ScrollDirection="None" TimeoutMS="2000" Version="V6">
               <p:CvElementExistsWithDescriptor.DesignTimeDescriptor>
                 <uc:CvDescriptor Id="1dc6bcc1-8f63-49b8-b395-b4e868a6d9a6">
                   <uc:CvDescriptor.Anchors>
@@ -221,7 +225,13 @@
                 </uc:CvDescriptor>
               </p:CvElementExistsWithDescriptor.DesignTimeDescriptor>
             </p:CvElementExistsWithDescriptor>
-            <If Condition="[Not isCheckColumHeading]" DisplayName="If - Verifica isCheckColumHeading" sap:VirtualizedContainerService.HintSize="450,891" sap2010:WorkflowViewState.IdRef="If_2">
+            <If Condition="[Not isCheckColumHeading]" DisplayName="If - Verifica isCheckColumHeading" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="If_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
               <If.Then>
                 <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,469" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <sap:WorkflowViewStateService.ViewState>
@@ -230,7 +240,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:LogMessage DisplayName="Log Message info useWorksheet" sap:VirtualizedContainerService.HintSize="354,173" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Marcando WorkSheet&quot;]" />
-                  <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: CheckBox (41,137,14,14)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Use worksheet functions to represent subtotal fields in report' (58,137,286,14)&quot;]" DesignTimeCacheId="a9522916-03c3-41fd-9432-f6f820cc60e7" DesignTimeScaleFactor="1" DisplayName="CV Click - UseWorkSheet" sap:VirtualizedContainerService.HintSize="354,208" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_2" InformativeScreenshot="fa9ba809e1bc5262bd65c970eb7df667" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
+                  <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: CheckBox (41,137,14,14)&quot; +&#xA;&quot;Anchor: Text 'Use worksheet functions to represent subtotal fields in report' (58,137,286,14)&quot;]" DesignTimeCacheId="a9522916-03c3-41fd-9432-f6f820cc60e7" DesignTimeScaleFactor="1" DisplayName="CV Click - UseWorkSheet" sap:VirtualizedContainerService.HintSize="354,208" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_2" InformativeScreenshot="fa9ba809e1bc5262bd65c970eb7df667" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
                     <p:CvClickWithDescriptor.CursorPosition>
                       <ui:CursorPosition Position="Center">
                         <ui:CursorPosition.OffsetX>
@@ -277,7 +287,7 @@
                 </Sequence>
               </If.Else>
             </If>
-            <p:CvElementExistsWithDescriptor DelayScreenshotAfterScroll="{x:Null}" Descriptor="[&quot;Target: Image (42,211,12,10)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Column width based on objects in area' (58,208,184,14)&quot;]" DesignTimeCacheId="a9522916-03c3-41fd-9432-f6f820cc60e7" DesignTimeScaleFactor="1" DisplayName="CV Element Exists - Column " sap:VirtualizedContainerService.HintSize="450,169" sap2010:WorkflowViewState.IdRef="CvElementExistsWithDescriptor_3" InformativeScreenshot="6f688fed0d83a3763f06c5af8523252f" NumberOfScrolls="2" Result="[isColumnWidth]" ScrollDirection="None" TimeoutMS="2000" Version="V6">
+            <p:CvElementExistsWithDescriptor DelayScreenshotAfterScroll="{x:Null}" Descriptor="[&quot;Target: Image (42,211,12,10)&quot; +&#xA;&quot;Anchor: Text 'Column width based on objects in area' (58,208,184,14)&quot;]" DesignTimeCacheId="a9522916-03c3-41fd-9432-f6f820cc60e7" DesignTimeScaleFactor="1" DisplayName="CV Element Exists - Column " sap:VirtualizedContainerService.HintSize="450,169" sap2010:WorkflowViewState.IdRef="CvElementExistsWithDescriptor_3" InformativeScreenshot="6f688fed0d83a3763f06c5af8523252f" NumberOfScrolls="2" Result="[isColumnWidth]" ScrollDirection="None" TimeoutMS="2000" Version="V6">
               <p:CvElementExistsWithDescriptor.DesignTimeDescriptor>
                 <uc:CvDescriptor Id="b3f989f2-da3e-4df4-b7f2-a1380406f135">
                   <uc:CvDescriptor.Anchors>
@@ -291,7 +301,13 @@
                 </uc:CvDescriptor>
               </p:CvElementExistsWithDescriptor.DesignTimeDescriptor>
             </p:CvElementExistsWithDescriptor>
-            <If Condition="[Not isColumnWidth]" DisplayName="If Verifica isColumnWidth" sap:VirtualizedContainerService.HintSize="450,891" sap2010:WorkflowViewState.IdRef="If_3">
+            <If Condition="[Not isColumnWidth]" DisplayName="If Verifica isColumnWidth" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="If_3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
               <If.Then>
                 <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,469" sap2010:WorkflowViewState.IdRef="Sequence_7">
                   <sap:WorkflowViewStateService.ViewState>
@@ -300,7 +316,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:LogMessage DisplayName="Log Message inf columns withd" sap:VirtualizedContainerService.HintSize="354,173" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Column width marcado&quot;]" />
-                  <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: RadioButton (41,207,14,14)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Column width based on objects in area' (58,208,184,14)&quot;]" DesignTimeCacheId="a9522916-03c3-41fd-9432-f6f820cc60e7" DesignTimeScaleFactor="1" DisplayName="CV Click - Column width" sap:VirtualizedContainerService.HintSize="354,208" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_3" InformativeScreenshot="6fd76ff06d87e5a60cbab55142e79e23" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
+                  <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: RadioButton (41,207,14,14)&quot; +&#xA;&quot;Anchor: Text 'Column width based on objects in area' (58,208,184,14)&quot;]" DesignTimeCacheId="a9522916-03c3-41fd-9432-f6f820cc60e7" DesignTimeScaleFactor="1" DisplayName="CV Click - Column width" sap:VirtualizedContainerService.HintSize="354,208" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_3" InformativeScreenshot="6fd76ff06d87e5a60cbab55142e79e23" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
                     <p:CvClickWithDescriptor.CursorPosition>
                       <ui:CursorPosition Position="Center">
                         <ui:CursorPosition.OffsetX>
@@ -347,7 +363,7 @@
                 </Sequence>
               </If.Else>
             </If>
-            <p:CvElementExistsWithDescriptor DelayScreenshotAfterScroll="{x:Null}" Descriptor="[&quot;Target: Image (38,265,19,15)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Non-Tabular format' (58,267,93,12)&quot;]" DesignTimeCacheId="a9522916-03c3-41fd-9432-f6f820cc60e7" DesignTimeScaleFactor="1" DisplayName="CV Element Exists - Non Tabular" sap:VirtualizedContainerService.HintSize="450,169" sap2010:WorkflowViewState.IdRef="CvElementExistsWithDescriptor_5" InformativeScreenshot="41937821731d5fec0165a5e547f424df" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
+            <p:CvElementExistsWithDescriptor DelayScreenshotAfterScroll="{x:Null}" Descriptor="[&quot;Target: Image (38,265,19,15)&quot; +&#xA;&quot;Anchor: Text 'Non-Tabular format' (58,267,93,12)&quot;]" DesignTimeCacheId="a9522916-03c3-41fd-9432-f6f820cc60e7" DesignTimeScaleFactor="1" DisplayName="CV Element Exists - Non Tabular" sap:VirtualizedContainerService.HintSize="450,169" sap2010:WorkflowViewState.IdRef="CvElementExistsWithDescriptor_5" InformativeScreenshot="41937821731d5fec0165a5e547f424df" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
               <p:CvElementExistsWithDescriptor.DesignTimeDescriptor>
                 <uc:CvDescriptor Id="8088f172-98be-4866-94de-dd204d68fc9b">
                   <uc:CvDescriptor.Anchors>
@@ -361,7 +377,13 @@
                 </uc:CvDescriptor>
               </p:CvElementExistsWithDescriptor.DesignTimeDescriptor>
             </p:CvElementExistsWithDescriptor>
-            <If Condition="[Not isNonTabular]" DisplayName="If verifica isNonTabular" sap:VirtualizedContainerService.HintSize="450,891" sap2010:WorkflowViewState.IdRef="If_4">
+            <If Condition="[Not isNonTabular]" DisplayName="If verifica isNonTabular" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="If_4">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
               <If.Then>
                 <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,469" sap2010:WorkflowViewState.IdRef="Sequence_9">
                   <sap:WorkflowViewStateService.ViewState>
@@ -370,7 +392,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:LogMessage DisplayName="Log Message NonTabular" sap:VirtualizedContainerService.HintSize="354,173" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Marcando non tabular&quot;]" />
-                  <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: RadioButton (41,266,14,14)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Non-Tabular format' (58,267,93,12)&quot;]" DesignTimeCacheId="a9522916-03c3-41fd-9432-f6f820cc60e7" DesignTimeScaleFactor="1" DisplayName="CV Click - Non Tabular" sap:VirtualizedContainerService.HintSize="354,208" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_4" InformativeScreenshot="73a5f40bd8b28e74c3080508696b874a" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
+                  <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: RadioButton (41,266,14,14)&quot; +&#xA;&quot;Anchor: Text 'Non-Tabular format' (58,267,93,12)&quot;]" DesignTimeCacheId="a9522916-03c3-41fd-9432-f6f820cc60e7" DesignTimeScaleFactor="1" DisplayName="CV Click - Non Tabular" sap:VirtualizedContainerService.HintSize="354,208" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_4" InformativeScreenshot="73a5f40bd8b28e74c3080508696b874a" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
                     <p:CvClickWithDescriptor.CursorPosition>
                       <ui:CursorPosition Position="Center">
                         <ui:CursorPosition.OffsetX>
@@ -417,7 +439,7 @@
                 </Sequence>
               </If.Else>
             </If>
-            <p:CvSelectItemWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" InRegion="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (260,205,149,21)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Column width based on objects in area' (58,208,184,14)&quot;]" DesignTimeCacheId="a9522916-03c3-41fd-9432-f6f820cc60e7" DesignTimeScaleFactor="1" DisplayName="CV Dropdown Select - Details" EmptyField="False" sap:VirtualizedContainerService.HintSize="450,217" sap2010:WorkflowViewState.IdRef="CvSelectItemWithDescriptor_1" InformativeScreenshot="21b1b95e6eb7ea8605e72edbe69bd84d" NumberOfScrolls="2" ScrollDirection="None" Text="[&quot;Details&quot;]" Version="V6">
+            <p:CvSelectItemWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" InRegion="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (260,205,149,21)&quot; +&#xA;&quot;Anchor: Text 'Column width based on objects in area' (58,208,184,14)&quot;]" DesignTimeCacheId="a9522916-03c3-41fd-9432-f6f820cc60e7" DesignTimeScaleFactor="1" DisplayName="CV Dropdown Select - Details" EmptyField="False" sap:VirtualizedContainerService.HintSize="450,217" sap2010:WorkflowViewState.IdRef="CvSelectItemWithDescriptor_1" InformativeScreenshot="21b1b95e6eb7ea8605e72edbe69bd84d" NumberOfScrolls="2" ScrollDirection="None" Text="[&quot;Details&quot;]" Version="V6">
               <p:CvSelectItemWithDescriptor.DesignTimeDescriptor>
                 <uc:CvDescriptor Id="6d06100a-8221-49c1-be64-ab9c2c5561c5">
                   <uc:CvDescriptor.Anchors>
@@ -441,7 +463,7 @@
                 </ui:Target>
               </p:CvSelectItemWithDescriptor.Target>
             </p:CvSelectItemWithDescriptor>
-            <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Text 'OK' (123,330,17,12)&quot; +&#xD;&#xA;&quot;Anchor: Button (93,325,76,24)&quot;]" DesignTimeCacheId="a9522916-03c3-41fd-9432-f6f820cc60e7" DesignTimeScaleFactor="1" DisplayName="CV Click - Ok" sap:VirtualizedContainerService.HintSize="450,217" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_5" InformativeScreenshot="e413021f5ca084f36fb1a470873f8345" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
+            <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Text 'OK' (123,330,17,12)&quot; +&#xA;&quot;Anchor: Button (93,325,76,24)&quot;]" DesignTimeCacheId="a9522916-03c3-41fd-9432-f6f820cc60e7" DesignTimeScaleFactor="1" DisplayName="CV Click - Ok" sap:VirtualizedContainerService.HintSize="450,217" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_5" InformativeScreenshot="e413021f5ca084f36fb1a470873f8345" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
               <p:CvClickWithDescriptor.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -475,7 +497,7 @@
                 </ui:Target>
               </p:CvClickWithDescriptor.Target>
             </p:CvClickWithDescriptor>
-            <p:CvTypeIntoWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (138,407,831,24)&quot; +&#xD;&#xA;&quot;Anchor: Text 'File name:' (81,413,55,12)&quot;]" DesignTimeCacheId="17b55af0-d822-44cc-9a4f-064d8faaa812" DesignTimeScaleFactor="1" DisplayName="CV Type Into - FileName" EmptyField="True" sap:VirtualizedContainerService.HintSize="450,208" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_1" InformativeScreenshot="24bfb2226367b7ba2984a03814fad09c" NumberOfScrolls="2" ScrollDirection="None" Text="[in_strLocalFolder + &quot;[k(enter)]&quot;]" Version="V6">
+            <p:CvTypeIntoWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (138,407,831,24)&quot; +&#xA;&quot;Anchor: Text 'File name:' (81,413,55,12)&quot;]" DesignTimeCacheId="17b55af0-d822-44cc-9a4f-064d8faaa812" DesignTimeScaleFactor="1" DisplayName="CV Type Into - FileName" EmptyField="True" sap:VirtualizedContainerService.HintSize="450,208" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_1" InformativeScreenshot="24bfb2226367b7ba2984a03814fad09c" NumberOfScrolls="2" ScrollDirection="None" Text="[in_strLocalFolder + &quot;[k(enter)]&quot;]" Version="V6">
               <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
                 <uc:CvDescriptor Id="7b97c9fc-58ae-4188-8397-734475c295a8">
                   <uc:CvDescriptor.Anchors>
@@ -502,6 +524,9 @@
           </Sequence>
         </ActivityAction>
       </p:CVScope.Body>
+      <p:CVScope.DesignTimeCache>
+        <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" DataSent="False" />
+      </p:CVScope.DesignTimeCache>
       <p:CVScope.DesignTimeCacheContainer>
         <uc:CvCacheContainer>
           <uc:CvCacheContainer.Caches>
@@ -1023,6 +1048,14 @@
       <p:CVScope.UseLocalServer>
         <InArgument x:TypeArguments="x:Boolean" />
       </p:CVScope.UseLocalServer>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </p:CVScope>
+    <ui:LogMessage DisplayName="Log Message inf verify fields end" sap:VirtualizedContainerService.HintSize="354,164" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;Verificação de campos finalizada&quot;]" />
   </Sequence>
 </Activity>

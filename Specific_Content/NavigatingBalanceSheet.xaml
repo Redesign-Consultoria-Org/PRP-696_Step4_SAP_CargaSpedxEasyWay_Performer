@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="NavigatingBalanceSheet" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1140,604" sap2010:WorkflowViewState.IdRef="NavigatingBalanceSheet_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="NavigatingBalanceSheet" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1140,1727" sap2010:WorkflowViewState.IdRef="NavigatingBalanceSheet_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -94,13 +94,14 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="NavigatingBalanceSheet" sap:VirtualizedContainerService.HintSize="416,539" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="WorkFlow Responsável por navegar até a tela de balancete&#xD;&#xA; -Clica em relatorios&#xD;&#xA; -Operacionais&#xD;&#xA; -Balancete" DisplayName="NavigatingBalanceSheet" sap:VirtualizedContainerService.HintSize="496,1690" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message info navigate statr" sap:VirtualizedContainerService.HintSize="354,173" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Navegando para tela de Balancete&quot;]">
+    <ui:LogMessage DisplayName="Log Message info navigate statr" sap:VirtualizedContainerService.HintSize="434,173" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Navegando para tela de Balancete&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -108,7 +109,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" Server="{x:Null}" sap2010:Annotation.AnnotationText="Por se tratar de um ambiente virtualizado, é necessário usar visão computacional para mapear os elementos." ApiKey="lMRuF0JXCDWxC4oxjXhJlchPzQJfByg8hFeFDlO0eqLVOIULcWnkHaKES96mze3wbTJoLrzZtV02BFi/4U+bTg==" CvMethod="ElementDetection, OCR" DesignTimeCacheId="3c9659b9-0071-4c44-88f1-947049e3a106" DisplayName="CV Screen Scope 'NavigatingBalanceSheet'" sap:VirtualizedContainerService.HintSize="354,114" sap2010:WorkflowViewState.IdRef="CVScope_1" SendOnPremData="False" Version="V6">
+    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" Server="{x:Null}" sap2010:Annotation.AnnotationText="Por se tratar de um ambiente virtualizado, é necessário usar visão computacional para mapear os elementos." ApiKey="lMRuF0JXCDWxC4oxjXhJlchPzQJfByg8hFeFDlO0eqLVOIULcWnkHaKES96mze3wbTJoLrzZtV02BFi/4U+bTg==" CvMethod="ElementDetection, OCR" DesignTimeCacheId="3c9659b9-0071-4c44-88f1-947049e3a106" DisplayName="CV Screen Scope 'NavigatingBalanceSheet'" sap:VirtualizedContainerService.HintSize="434,1165" sap2010:WorkflowViewState.IdRef="CVScope_1" SendOnPremData="False" Version="V6">
       <p:CVScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -168,7 +169,7 @@
                 </uc:CvDescriptor>
               </p:CvHoverWithDescriptor.DesignTimeDescriptor>
             </p:CvHoverWithDescriptor>
-            <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Text 'Balancete' (383,79,53,12)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Lançamentos' (383,57,73,15)&quot;]" DesignTimeCacheId="070429c8-d36f-41f4-90ed-e9c340b3e848" DesignTimeScaleFactor="1" DisplayName="CV Click - Balancete" sap:VirtualizedContainerService.HintSize="400,208" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_2" InformativeScreenshot="055ebc0ecf4fc54898496f97c6066649" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
+            <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Text 'Balancete' (383,79,53,12)&quot; +&#xA;&quot;Anchor: Text 'Lançamentos' (383,57,73,15)&quot;]" DesignTimeCacheId="070429c8-d36f-41f4-90ed-e9c340b3e848" DesignTimeScaleFactor="1" DisplayName="CV Click - Balancete" sap:VirtualizedContainerService.HintSize="400,208" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_2" InformativeScreenshot="055ebc0ecf4fc54898496f97c6066649" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
               <p:CvClickWithDescriptor.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -205,10 +206,13 @@
           </Sequence>
         </ActivityAction>
       </p:CVScope.Body>
+      <p:CVScope.DesignTimeCache>
+        <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" DataSent="False" />
+      </p:CVScope.DesignTimeCache>
       <p:CVScope.DesignTimeCacheContainer>
         <uc:CvCacheContainer>
           <uc:CvCacheContainer.Caches>
-            <scg:List x:TypeArguments="uc:CVCache" Capacity="4">
+            <scg:List x:TypeArguments="uc:CVCache" Capacity="3">
               <uc:CVCache DataSent="False" DisplayName="Screen CV Click - 'Relatórios' (Main)" Id="3c9659b9-0071-4c44-88f1-947049e3a106" InformativeScreenshot="5049fda0fe6d952a9a2c8476c3443e2e" LogicalPosition="446, 177" OcrText="Easy-SPED-Contábil - Versão 1.25 - Produção - [Rpa.Cargasped] _ X Cadastros Movimentos Relatórios Especiais Utilitários Ajuda" Position="446, 177" ScreenshotGuid="6f438ce3-31fd-4860-a3ba-793b0d9bf2d8" ServerVersion="24.10.5.1">
                 <uc:CVCache.CvAnchorRelations>
                   <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="0" />
@@ -524,12 +528,12 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </p:CVScope>
-    <ui:LogMessage DisplayName="Log Message inf Navigate finished" sap:VirtualizedContainerService.HintSize="354,164" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Naegação concluída&quot;]">
+    <ui:LogMessage DisplayName="Log Message inf Navigate finished" sap:VirtualizedContainerService.HintSize="434,164" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Naegação concluída&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
