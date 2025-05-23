@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="testesDiversos" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1140,564" sap2010:WorkflowViewState.IdRef="testesDiversos_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:c="clr-namespace:CCR_RPA_SAP_Activities;assembly=CCR.RPA.SAP.Activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ucas="clr-namespace:UiPath.Core.Activities.SAP;assembly=UiPath.UiAutomation.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="testesDiversos" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1477,1811" sap2010:WorkflowViewState.IdRef="testesDiversos_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:c="clr-namespace:CCR_RPA_SAP_Activities;assembly=CCR.RPA.SAP.Activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ucas="clr-namespace:UiPath.Core.Activities.SAP;assembly=UiPath.UiAutomation.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -46,6 +46,11 @@
       <x:String>System.Net</x:String>
       <x:String>System.Numerics</x:String>
       <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -108,97 +113,127 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
       <AssemblyReference>System.ComponentModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="testesDiversos" sap:VirtualizedContainerService.HintSize="416,360" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="testesDiversos" sap:VirtualizedContainerService.HintSize="548,1746" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <c:Login sap:VirtualizedContainerService.HintSize="354,224" sap2010:WorkflowViewState.IdRef="Login_1" in_CredentialFolder="GrupoCCR" in_CredentialSapLogin="PRP-696_SAP_LOGIN" in_SapConnName="ECP" />
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="BalançoC.L&amp;P(1)" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="9f8dc36f-e417-4e2c-824b-e9da12faaa41" Version="V2">
-      <uix:NApplicationCard.Body>
+    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" Server="{x:Null}" ApiKey="lMRuF0JXCDWxC4oxjXhJlchPzQJfByg8hFeFDlO0eqLVOIULcWnkHaKES96mze3wbTJoLrzZtV02BFi/4U+bTg==" CvMethod="ElementDetection, OCR" DesignTimeCacheId="89107b2c-5fe9-4c04-bff7-cb24af266f5e" DisplayName="CV Screen Scope 'mstsc.exe Easy-SPED-Con...'" sap:VirtualizedContainerService.HintSize="486,1610" sap2010:WorkflowViewState.IdRef="CVScope_1" SendOnPremData="False" Version="V6">
+      <p:CVScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="514,584" sap2010:WorkflowViewState.IdRef="Sequence_2">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <uix:NSAPSelectMenuItem DisplayName="Select Menu Item" sap:VirtualizedContainerService.HintSize="452,119" sap2010:WorkflowViewState.IdRef="NSAPSelectMenuItem_1" Item="Lista/Exportar/Planilha eletrônica..." ScopeIdentifier="9f8dc36f-e417-4e2c-824b-e9da12faaa41" Version="V4">
-              <uix:NSAPSelectMenuItem.Target>
-                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" FullSelectorArgument="[Nothing]" Guid="defe93bc-1061-49ad-9646-9041a9195bef" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Balanço/C.L&amp;amp;P' /&gt;" SearchSteps="Selector" />
-              </uix:NSAPSelectMenuItem.Target>
-            </uix:NSAPSelectMenuItem>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="452,375" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+          <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: InputBox (367,345,197,21)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Format:' (367,328,36,12)&quot;]" DesignTimeCacheId="89107b2c-5fe9-4c04-bff7-cb24af266f5e" DesignTimeScaleFactor="1" DisplayName="CV Click - InputBox" sap:VirtualizedContainerService.HintSize="452,217" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_1" InformativeScreenshot="9fe1bdab3b9ca21c3902fdf559909218" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="11" ScrollDirection="None" Version="V6">
+              <p:CvClickWithDescriptor.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </p:CvClickWithDescriptor.CursorPosition>
+              <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                <uc:CvDescriptor Id="9a093cf6-f537-4fc2-bf25-2031cf22ead4">
+                  <uc:CvDescriptor.Anchors>
+                    <x:Array Type="uc:CvElementDescriptor">
+                      <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="367, 328, 36, 12" ElementType="Text" Text="Format:" />
+                    </x:Array>
+                  </uc:CvDescriptor.Anchors>
+                  <uc:CvDescriptor.Target>
+                    <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="367, 345, 197, 21" ElementType="InputBox" />
+                  </uc:CvDescriptor.Target>
+                </uc:CvDescriptor>
+              </p:CvClickWithDescriptor.DesignTimeDescriptor>
+              <p:CvClickWithDescriptor.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="0622fa52-8629-4fee-9454-0b2db7045fe3">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </p:CvClickWithDescriptor.Target>
+            </p:CvClickWithDescriptor>
+            <ui:RepeatNumberOfTimesX DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="452,440" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" NumberOfTimes="11" StartAt="1">
+              <ui:RepeatNumberOfTimesX.Body>
+                <ActivityAction x:TypeArguments="x:Int32">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentItem" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,244" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="354,156" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="down" KeyModifiers="None" SpecialKey="True">
+                      <ui:SendHotkey.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="5b3d9013-a6f9-4c01-b176-98ecd215c343">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:SendHotkey.Target>
+                    </ui:SendHotkey>
+                  </Sequence>
+                </ActivityAction>
+              </ui:RepeatNumberOfTimesX.Body>
+            </ui:RepeatNumberOfTimesX>
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="452,165" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="enter" KeyModifiers="None" SpecialKey="True">
+              <ui:SendHotkey.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="5b3d9013-a6f9-4c01-b176-98ecd215c343">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SendHotkey.Target>
+            </ui:SendHotkey>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="452,438" sap2010:WorkflowViewState.IdRef="CommentOut_3">
               <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,271" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,296" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ucas:SelectMenuItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" AlterIfDisabled="True" DisplayName="Select Menu Item 'saplogon.exe  Balanço/C...'" sap:VirtualizedContainerService.HintSize="354,183" sap2010:WorkflowViewState.IdRef="SelectMenuItem_1" Item="Lista/Exportar/Planilha eletrônica...">
-                    <ucas:SelectMenuItem.Items>
-                      <scg:List x:TypeArguments="x:String" Capacity="50">
-                        <x:String>Ir para/Chamar relatório...</x:String>
-                        <x:String>Ir para/Voltar</x:String>
-                        <x:String>Visões/SAP List Viewer</x:String>
-                        <x:String>Visões/Microsoft Excel</x:String>
-                        <x:String>Visões/Lotus 1-2-3</x:String>
-                        <x:String>Visões/Gráfico</x:String>
-                        <x:String>Configurações/Determinar lista expandida de totais...</x:String>
-                        <x:String>Configurações/Atrib.relatório...</x:String>
-                        <x:String>Sistema/Janela GUI nova</x:String>
-                        <x:String>Sistema/Fechar janela GUI</x:String>
-                        <x:String>Sistema/Serviços para objeto</x:String>
-                        <x:String>Sistema/Ordens spool próprias</x:String>
-                        <x:String>Sistema/Jobs próprios</x:String>
-                        <x:String>Sistema/Mensagem breve</x:String>
-                        <x:String>Sistema/Status...</x:String>
-                        <x:String>Sistema/Efetuar logoff</x:String>
-                        <x:String>Ajuda/Ajuda para aplicação</x:String>
-                        <x:String>Ajuda/Biblioteca SAP</x:String>
-                        <x:String>Ajuda/Glossário</x:String>
-                        <x:String>Ajuda/Infos de release</x:String>
-                        <x:String>Ajuda/SAP Service Marketplace</x:String>
-                        <x:String>Ajuda/Entrar mensagem do Service Desk</x:String>
-                        <x:String>Ajuda/Configurações...</x:String>
-                        <x:String>Lista/Exportar/Processamento de texto...</x:String>
-                        <x:String>Lista/Exportar/Planilha eletrônica...</x:String>
-                        <x:String>Lista/Exportar/File local...</x:String>
-                        <x:String>Lista/Exportar/Arquivo ampliado do SAP Query</x:String>
-                        <x:String>Lista/Exportar/Exportação XML...</x:String>
-                        <x:String>Lista/Enviar a/Destinatário do e-mail</x:String>
-                        <x:String>Lista/Enviar a/Pasta</x:String>
-                        <x:String>Processar/Calcular/Total</x:String>
-                        <x:String>Processar/Calcular/Valor médio</x:String>
-                        <x:String>Processar/Calcular/Mínimo</x:String>
-                        <x:String>Processar/Calcular/Máximo</x:String>
-                        <x:String>Processar/Calcular/Contar</x:String>
-                        <x:String>Configurações/Layout/Modificar...</x:String>
-                        <x:String>Configurações/Layout/Selecionar...</x:String>
-                        <x:String>Configurações/Layout/Gravar...</x:String>
-                        <x:String>Configurações/Layout/Administração de layouts</x:String>
-                        <x:String>Configurações/Colunas/Largura otimizada</x:String>
-                        <x:String>Configurações/Colunas/Fixar até coluna</x:String>
-                        <x:String>Configurações/Colunas/Anular fixação</x:String>
-                        <x:String>Sistema/Especificações do usuário/Manter dados</x:String>
-                        <x:String>Sistema/Especificações do usuário/Definir dados</x:String>
-                        <x:String>Sistema/Especificações do usuário/Eliminar dados</x:String>
-                        <x:String>Sistema/Especificações do usuário/Dados próprios</x:String>
-                        <x:String>Sistema/Especificações do usuário/Ampliar favoritos</x:String>
-                        <x:String>Sistema/Serviços/Reporting</x:String>
-                        <x:String>Sistema/Serviços/QuickViewer</x:String>
-                        <x:String>Sistema/Serviços/Controle de saída</x:String>
-                      </scg:List>
-                    </ucas:SelectMenuItem.Items>
-                    <ucas:SelectMenuItem.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="7a01f0e8-4f39-427a-b355-9c39fb0d9ed2" InformativeScreenshot="97bea992c829b64bb91f92a608821728">
+                  <p:CvSelectItemWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" InRegion="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="False" Descriptor="[&quot;Target: InputBox (368,346,196,21)&quot; +&#xA;&quot;Anchor: Text 'Format:' (367,328,36,12)&quot;]" DesignTimeCacheId="89107b2c-5fe9-4c04-bff7-cb24af266f5e" DesignTimeScaleFactor="1" DisplayName="CV Dropdown Select - InputBox" EmptyField="False" sap:VirtualizedContainerService.HintSize="354,208" sap2010:WorkflowViewState.IdRef="CvSelectItemWithDescriptor_1" InformativeScreenshot="736bd886837a766fba7ea6186d7474a8" NumberOfScrolls="2" ScrollDirection="None" Text="[&quot;Excel 8.0 (XLS) (Extend)”]" Version="V6">
+                    <p:CvSelectItemWithDescriptor.DesignTimeDescriptor>
+                      <uc:CvDescriptor Id="e6f623a6-9530-4fdd-b0d4-c5c16a2e58cb">
+                        <uc:CvDescriptor.Anchors>
+                          <x:Array Type="uc:CvElementDescriptor">
+                            <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="367, 328, 36, 12" ElementType="Text" Text="Format:" />
+                          </x:Array>
+                        </uc:CvDescriptor.Anchors>
+                        <uc:CvDescriptor.Target>
+                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="368, 346, 196, 21" ElementType="InputBox" />
+                        </uc:CvDescriptor.Target>
+                      </uc:CvDescriptor>
+                    </p:CvSelectItemWithDescriptor.DesignTimeDescriptor>
+                    <p:CvSelectItemWithDescriptor.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="9caa56c2-fc76-4f45-a9ae-6c1ad1377ee2">
                         <ui:Target.TimeoutMS>
                           <InArgument x:TypeArguments="x:Int32" />
                         </ui:Target.TimeoutMS>
@@ -206,23 +241,388 @@
                           <InArgument x:TypeArguments="ui:WaitForReady" />
                         </ui:Target.WaitForReady>
                       </ui:Target>
-                    </ucas:SelectMenuItem.Target>
-                  </ucas:SelectMenuItem>
+                    </p:CvSelectItemWithDescriptor.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </p:CvSelectItemWithDescriptor>
                 </Sequence>
               </ui:CommentOut.Body>
             </ui:CommentOut>
           </Sequence>
         </ActivityAction>
-      </uix:NApplicationCard.Body>
-      <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="-8, -8, 1936, 1056" ContentHash="26OorlcHh0qCgfPWEpABaQ" FilePath="D:\Program Files\SAP\FrontEnd\SAPgui\saplogon.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE1SURBVFhHY/j//z/jQOJRB4w6YNQBA+8Ap5rV7E7Vqw8OCK5ZU8jgVL2GE8j4PwB4rXPtGsGBcgDIcmFIFNDfAXDLwQ44dOqipWP16v+O1auohFcDLQFhwpaDHfD20/fP9198/E8NvPf8vf9+DTBHELYc7ID3X37+pwY+e/Pxf7+K2f/tShdhcwBWy6nmgAu3n/73Lp3x37Z4AbYoWA+0XBCb5SBMsQPOAy33LJ72365kITafr3epW4vTchCmyAEgn3uWTIdavgrZ4r/EWA7CDA+evy1tW7Lvf8uiXSTi3f99yoFxToHlIMxglTuD075i2X/78qUkY4fK5ejBDrbcuQ53nKNjahZEUJ8TbzkIU8sBJPschqnlAKLjHB1TXh3XrJlJruUgPNoiGnXAqANGugP+MwIA+QFnw3tJZtEAAAAASUVORK5CYII=" InformativeScreenshot="5c64a96754482f88a758b3b2edf130c1.png" Reference="lg5H7izgS0qA3fwFs2FUbQ/_oZ6sTZf3k6lpSofk22zBg" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Balanço/C.L&amp;amp;P' /&gt;" Title="Balanço/C.L&amp;P" Version="V1" />
-      </uix:NApplicationCard.TargetApp>
+      </p:CVScope.Body>
+      <p:CVScope.DesignTimeCacheContainer>
+        <uc:CvCacheContainer>
+          <uc:CvCacheContainer.Caches>
+            <scg:List x:TypeArguments="uc:CVCache" Capacity="1">
+              <uc:CVCache DataSent="False" DisplayName="Screen CV Type Into - 'Charact (Main)" Id="89107b2c-5fe9-4c04-bff7-cb24af266f5e" InformativeScreenshot="58582118544ced30d5b01781d202ade2" LogicalPosition="446, 177" OcrText="Easy-SPED-Contábil - Versão 1.25 - Produção - [Rpa.Cargasped] - [Balancete] _ X Cadastros Movimentos Relatórios Especiais Utilitários Ajuda _ X 100% 1 of 1+ ^ Easy-Way do Brasil - Consultores - EasvContabil Versão 1.25 Data: 23/05/2025 - Balancete Mensal - 1100 - ND CONCESSOES E PARTICIPACOES LTDA. (EWSPC807) Contes MO Até [ecs0cocc, MÉsiAmO [042025 [006], Wesiores Página Conta Saldo do Mês Movimento a Movimento a Saldo A Código Descrição Anterior Débito Crédito Export X Format: OK Character-separated values Destination: Cancel Disk file v &lt; &gt;" Position="446, 177" ScreenshotGuid="2b55d03e-ad0e-468e-91d6-02064c075db5" ServerVersion="24.10.5.1">
+                <uc:CVCache.CvAnchorRelations>
+                  <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="4">
+                    <uc:AnchorRelationInfo IsTargetText="False" Target="54">
+                      <uc:AnchorRelationInfo.Anchors>
+                        <x:Array Type="x:Int32">
+                          <x:Int32>78</x:Int32>
+                        </x:Array>
+                      </uc:AnchorRelationInfo.Anchors>
+                    </uc:AnchorRelationInfo>
+                    <uc:AnchorRelationInfo IsTargetText="False" Target="56">
+                      <uc:AnchorRelationInfo.Anchors>
+                        <x:Array Type="x:Int32">
+                          <x:Int32>74</x:Int32>
+                        </x:Array>
+                      </uc:AnchorRelationInfo.Anchors>
+                    </uc:AnchorRelationInfo>
+                    <uc:AnchorRelationInfo IsTargetText="False" Target="55">
+                      <uc:AnchorRelationInfo.Anchors>
+                        <x:Array Type="x:Int32">
+                          <x:Int32>20</x:Int32>
+                        </x:Array>
+                      </uc:AnchorRelationInfo.Anchors>
+                    </uc:AnchorRelationInfo>
+                  </scg:List>
+                </uc:CVCache.CvAnchorRelations>
+                <uc:CVCache.CvTables>
+                  <x:Array Type="uc:CvTableInfo">
+                    <uc:CvTableInfo>
+                      <uc:CvTableInfo.Columns>
+                        <x:Array Type="x:Int32">
+                          <x:Int32>67</x:Int32>
+                          <x:Int32>330</x:Int32>
+                          <x:Int32>620</x:Int32>
+                          <x:Int32>735</x:Int32>
+                          <x:Int32>830</x:Int32>
+                          <x:Int32>926</x:Int32>
+                          <x:Int32>996</x:Int32>
+                        </x:Array>
+                      </uc:CvTableInfo.Columns>
+                      <uc:CvTableInfo.Rows>
+                        <x:Array Type="x:Int32">
+                          <x:Int32>235</x:Int32>
+                          <x:Int32>258</x:Int32>
+                          <x:Int32>281</x:Int32>
+                        </x:Array>
+                      </uc:CvTableInfo.Rows>
+                    </uc:CvTableInfo>
+                  </x:Array>
+                </uc:CVCache.CvTables>
+                <uc:CVCache.CvUiElements>
+                  <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="64">
+                    <uc:CvElementInfo Category="Button" Region="592, 361, 77, 25" />
+                    <uc:CvElementInfo Category="Button" Region="593, 332, 76, 24" />
+                    <uc:CvElementInfo Category="MinimizeButton" Region="962, 30, 20, 21" />
+                    <uc:CvElementInfo Category="InputBox" Region="205, 60, 72, 22" />
+                    <uc:CvElementInfo Category="MaximizeButton" Region="949, 0, 28, 22" />
+                    <uc:CvElementInfo Category="MinimizeButton" Region="920, 0, 31, 22" />
+                    <uc:CvElementInfo Category="ArrowButton" Region="997, 83, 19, 19" />
+                    <uc:CvElementInfo Category="Icon" Region="53, 60, 18, 19" />
+                    <uc:CvElementInfo Category="CloseButton" Region="1000, 30, 20, 20" />
+                    <uc:CvElementInfo Category="ArrowButton" Region="980, 695, 19, 19" />
+                    <uc:CvElementInfo Category="ArrowButton" Region="997, 678, 19, 18" />
+                    <uc:CvElementInfo Category="Icon" Region="7, 5, 20, 20" />
+                    <uc:CvElementInfo Category="Icon" Region="28, 60, 19, 19" />
+                    <uc:CvElementInfo Category="MaximizeButton" Region="981, 30, 21, 21" />
+                    <uc:CvElementInfo Category="Icon" Region="440, 60, 20, 19" />
+                    <uc:CvElementInfo Category="ArrowButton" Region="15, 695, 20, 19" />
+                    <uc:CvElementInfo Category="CloseButton" Region="646, 282, 36, 23" />
+                    <uc:CvElementInfo Category="Icon" Region="9, 29, 22, 22" />
+                    <uc:CvElementInfo Category="CloseButton" Region="975, 1, 49, 22" />
+                    <uc:CvElementInfo Category="ArrowButton" Region="187, 62, 14, 17" />
+                    <uc:CvElementInfo Category="ArrowButton" Region="355, 62, 13, 17" />
+                    <uc:CvElementInfo Category="Icon" Region="404, 64, 14, 14" />
+                    <uc:CvElementInfo Category="Icon" Region="162, 61, 15, 18" />
+                    <uc:CvElementInfo Category="Icon" Region="378, 61, 15, 17" />
+                    <uc:CvElementInfo Category="ArrowButton" Region="378, 61, 14, 17" />
+                    <uc:CvElementInfo Category="Cell" Region="67, 235, 263, 23" />
+                    <uc:CvElementInfo Category="Cell" Region="67, 258, 263, 23" />
+                    <uc:CvElementInfo Category="Cell" Region="330, 235, 290, 23" />
+                    <uc:CvElementInfo Category="Cell" Region="330, 258, 290, 23" />
+                    <uc:CvElementInfo Category="Cell" Region="620, 235, 115, 23" />
+                    <uc:CvElementInfo Category="Cell" Region="620, 258, 115, 23" />
+                    <uc:CvElementInfo Category="Cell" Region="735, 235, 95, 23" />
+                    <uc:CvElementInfo Category="Cell" Region="735, 258, 95, 23" />
+                    <uc:CvElementInfo Category="Cell" Region="830, 235, 96, 23" />
+                    <uc:CvElementInfo Category="Cell" Region="830, 258, 96, 23" />
+                    <uc:CvElementInfo Category="Cell" Region="926, 235, 70, 23" />
+                    <uc:CvElementInfo Category="Cell" Region="926, 258, 70, 23" />
+                    <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="163, 61, 15, 17" />
+                    <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="329, 260, 291, 23" />
+                    <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="355, 62, 13, 16" />
+                    <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="624, 162, 16, 16" />
+                    <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="981, 30, 20, 20" />
+                    <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="342, 283, 307, 28" />
+                    <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="1001, 30, 20, 20" />
+                    <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="832, 237, 96, 46" />
+                    <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="187, 62, 14, 17" />
+                    <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="735, 237, 96, 46" />
+                    <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="619, 238, 116, 46" />
+                    <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="984, 33, 15, 15" />
+                    <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="646, 283, 35, 22" />
+                    <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="975, 1, 47, 22" />
+                    <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="679, 302, 6, 143" />
+                    <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="294, 64, 16, 16" />
+                    <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="625, 162, 15, 16" />
+                    <uc:CvElementInfo Category="InputBox" Region="368, 393, 196, 20" />
+                    <uc:CvElementInfo Category="InputBox" Region="76, 60, 66, 22" />
+                    <uc:CvElementInfo Category="InputBox" Region="367, 345, 197, 21" />
+                    <uc:CvElementInfo Category="ArrowButton" Region="122, 61, 18, 19" />
+                    <uc:CvElementInfo Category="ArrowButton" Region="545, 346, 19, 20" />
+                    <uc:CvElementInfo Category="ArrowButton" Region="545, 394, 19, 19" />
+                  </scg:List>
+                </uc:CVCache.CvUiElements>
+                <uc:CVCache.OcrTexts>
+                  <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="85">
+                    <uc:OcrTextInfo Region="239, 8, 133, 17" Text="Easy-SPED-Contábil" />
+                    <uc:OcrTextInfo Region="379, 9, 7, 12" Text="-" />
+                    <uc:OcrTextInfo Region="396, 8, 47, 14" Text="Versão" />
+                    <uc:OcrTextInfo Region="446, 8, 28, 14" Text="1.25" />
+                    <uc:OcrTextInfo Region="481, 10, 7, 11" Text="-" />
+                    <uc:OcrTextInfo Region="495, 8, 64, 18" Text="Produção" />
+                    <uc:OcrTextInfo Region="570, 10, 7, 11" Text="-" />
+                    <uc:OcrTextInfo Region="588, 8, 111, 17" Text="[Rpa.Cargasped]" />
+                    <uc:OcrTextInfo Region="702, 9, 7, 13" Text="-" />
+                    <uc:OcrTextInfo Region="712, 8, 76, 16" Text="[Balancete]" />
+                    <uc:OcrTextInfo Region="928, 2, 13, 14" Text="_" />
+                    <uc:OcrTextInfo Region="992, 5, 12, 11" Text="X" />
+                    <uc:OcrTextInfo Region="35, 33, 53, 12" Text="Cadastros" />
+                    <uc:OcrTextInfo Region="101, 33, 67, 12" Text="Movimentos" />
+                    <uc:OcrTextInfo Region="182, 33, 53, 12" Text="Relatórios" />
+                    <uc:OcrTextInfo Region="248, 33, 48, 14" Text="Especiais" />
+                    <uc:OcrTextInfo Region="309, 33, 51, 12" Text="Utilitários" />
+                    <uc:OcrTextInfo Region="372, 33, 33, 14" Text="Ajuda" />
+                    <uc:OcrTextInfo Region="967, 34, 9, 12" Text="_" />
+                    <uc:OcrTextInfo Region="1005, 35, 10, 10" Text="X" />
+                    <uc:OcrTextInfo Region="78, 63, 27, 12" Text="100%" />
+                    <uc:OcrTextInfo Region="265, 64, 7, 12" Text="1" />
+                    <uc:OcrTextInfo Region="280, 65, 13, 12" Text="of" />
+                    <uc:OcrTextInfo Region="294, 65, 14, 11" Text="1+" />
+                    <uc:OcrTextInfo Region="1001, 89, 10, 7" Text="^" />
+                    <uc:OcrTextInfo Region="70, 143, 56, 12" Text="Easy-Way" />
+                    <uc:OcrTextInfo Region="126, 143, 15, 11" Text="do" />
+                    <uc:OcrTextInfo Region="143, 143, 34, 11" Text="Brasil" />
+                    <uc:OcrTextInfo Region="179, 144, 6, 10" Text="-" />
+                    <uc:OcrTextInfo Region="186, 143, 67, 11" Text="Consultores" />
+                    <uc:OcrTextInfo Region="254, 145, 6, 9" Text="-" />
+                    <uc:OcrTextInfo Region="260, 143, 76, 12" Text="EasvContabil" />
+                    <uc:OcrTextInfo Region="337, 142, 39, 12" Text="Versão" />
+                    <uc:OcrTextInfo Region="378, 143, 22, 11" Text="1.25" />
+                    <uc:OcrTextInfo Region="902, 142, 23, 10" Text="Data:" />
+                    <uc:OcrTextInfo Region="935, 141, 49, 11" Text="23/05/2025" />
+                    <uc:OcrTextInfo Region="987, 143, 6, 9" Text="-" />
+                    <uc:OcrTextInfo Region="472, 160, 88, 16" Text="Balancete" />
+                    <uc:OcrTextInfo Region="562, 160, 64, 16" Text="Mensal" />
+                    <uc:OcrTextInfo Region="628, 161, 7, 14" Text="-" />
+                    <uc:OcrTextInfo Region="393, 183, 33, 13" Text="1100" />
+                    <uc:OcrTextInfo Region="429, 184, 7, 12" Text="-" />
+                    <uc:OcrTextInfo Region="438, 183, 21, 13" Text="ND" />
+                    <uc:OcrTextInfo Region="462, 183, 99, 13" Text="CONCESSOES" />
+                    <uc:OcrTextInfo Region="563, 183, 11, 13" Text="E" />
+                    <uc:OcrTextInfo Region="575, 183, 114, 13" Text="PARTICIPACOES" />
+                    <uc:OcrTextInfo Region="691, 183, 40, 13" Text="LTDA." />
+                    <uc:OcrTextInfo Region="70, 198, 57, 12" Text="(EWSPC807)" />
+                    <uc:OcrTextInfo Region="411, 205, 20, 8" Text="Contes" />
+                    <uc:OcrTextInfo Region="432, 205, 8, 9" Text="MO" />
+                    <uc:OcrTextInfo Region="441, 205, 11, 8" Text="Até" />
+                    <uc:OcrTextInfo Region="452, 205, 36, 9" Text="[ecs0cocc," />
+                    <uc:OcrTextInfo Region="490, 204, 24, 9" Text="MÉsiAmO" />
+                    <uc:OcrTextInfo Region="515, 205, 24, 9" Text="[042025" />
+                    <uc:OcrTextInfo Region="572, 205, 16, 10" Text="[006]," />
+                    <uc:OcrTextInfo Region="589, 206, 20, 7" Text="Wesiores" />
+                    <uc:OcrTextInfo Region="970, 198, 29, 12" Text="Página" />
+                    <uc:OcrTextInfo Region="327, 242, 34, 12" Text="Conta" />
+                    <uc:OcrTextInfo Region="636, 242, 33, 12" Text="Saldo" />
+                    <uc:OcrTextInfo Region="671, 242, 15, 12" Text="do" />
+                    <uc:OcrTextInfo Region="688, 241, 25, 13" Text="Mês" />
+                    <uc:OcrTextInfo Region="744, 242, 64, 12" Text="Movimento" />
+                    <uc:OcrTextInfo Region="809, 244, 8, 10" Text="a" />
+                    <uc:OcrTextInfo Region="840, 242, 64, 12" Text="Movimento" />
+                    <uc:OcrTextInfo Region="905, 244, 8, 10" Text="a" />
+                    <uc:OcrTextInfo Region="955, 242, 32, 12" Text="Saldo" />
+                    <uc:OcrTextInfo Region="989, 242, 9, 12" Text="A" />
+                    <uc:OcrTextInfo Region="179, 266, 42, 14" Text="Código" />
+                    <uc:OcrTextInfo Region="446, 265, 60, 16" Text="Descrição" />
+                    <uc:OcrTextInfo Region="652, 257, 49, 12" Text="Anterior" />
+                    <uc:OcrTextInfo Region="764, 256, 38, 13" Text="Débito" />
+                    <uc:OcrTextInfo Region="857, 256, 43, 13" Text="Crédito" />
+                    <uc:OcrTextInfo Region="493, 290, 44, 17" Text="Export" />
+                    <uc:OcrTextInfo Region="658, 287, 12, 11" Text="X" />
+                    <uc:OcrTextInfo Region="367, 328, 36, 12" Text="Format:" />
+                    <uc:OcrTextInfo Region="622, 337, 17, 12" Text="OK" />
+                    <uc:OcrTextInfo Region="371, 350, 100, 13" Text="Character-separated" />
+                    <uc:OcrTextInfo Region="470, 350, 33, 12" Text="values" />
+                    <uc:OcrTextInfo Region="367, 375, 57, 12" Text="Destination:" />
+                    <uc:OcrTextInfo Region="613, 366, 35, 12" Text="Cancel" />
+                    <uc:OcrTextInfo Region="371, 397, 23, 12" Text="Disk" />
+                    <uc:OcrTextInfo Region="395, 397, 15, 12" Text="file" />
+                    <uc:OcrTextInfo Region="1001, 682, 10, 8" Text="v" />
+                    <uc:OcrTextInfo Region="21, 698, 8, 10" Text="&lt;" />
+                    <uc:OcrTextInfo Region="985, 698, 8, 10" Text="&gt;" />
+                  </scg:List>
+                </uc:CVCache.OcrTexts>
+              </uc:CVCache>
+            </scg:List>
+          </uc:CvCacheContainer.Caches>
+        </uc:CvCacheContainer>
+      </p:CVScope.DesignTimeCacheContainer>
+      <p:CVScope.OCREngine>
+        <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+          <ActivityFunc.Argument>
+            <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+          </ActivityFunc.Argument>
+          <p1:UiPathScreenOCR Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseAccents="{x:Null}" UseLocalServer="{x:Null}" ApiKey="lMRuF0JXCDWxC4oxjXhJlchPzQJfByg8hFeFDlO0eqLVOIULcWnkHaKES96mze3wbTJoLrzZtV02BFi/4U+bTg==" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_7" Image="[Image]" Language="en" NoopExecution="False" Profile="Screen" Scale="1" Timeout="100000" />
+        </ActivityFunc>
+      </p:CVScope.OCREngine>
+      <p:CVScope.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="01fee19f-48e3-4dd5-8d93-32d3aecdbbc9" InformativeScreenshot="1b7bf34fac4746ecc508ccec4e906ee8" Selector="&lt;wnd aaname='Easy-SPED-Contábil*' app='mstsc.exe' cls='RAIL_WINDOW' title='Easy-SPED-Contábil*' /&gt;" WaitForReady="INTERACTIVE">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+        </ui:Target>
+      </p:CVScope.Target>
+      <p:CVScope.UseLocalServer>
+        <InArgument x:TypeArguments="x:Boolean" />
+      </p:CVScope.UseLocalServer>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </p:CVScope>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486,48" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,193" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <c:Login sap:VirtualizedContainerService.HintSize="354,57" sap2010:WorkflowViewState.IdRef="Login_1" in_CredentialFolder="GrupoCCR" in_CredentialSapLogin="PRP-696_SAP_LOGIN" in_SapConnName="ECP">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </c:Login>
+          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="BalançoC.L&amp;P(1)" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="9f8dc36f-e417-4e2c-824b-e9da12faaa41" Version="V2">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="514,584" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NSAPSelectMenuItem DisplayName="Select Menu Item" sap:VirtualizedContainerService.HintSize="452,119" sap2010:WorkflowViewState.IdRef="NSAPSelectMenuItem_1" Item="Lista/Exportar/Planilha eletrônica..." ScopeIdentifier="9f8dc36f-e417-4e2c-824b-e9da12faaa41" Version="V4">
+                    <uix:NSAPSelectMenuItem.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" FullSelectorArgument="[Nothing]" Guid="d635661c-b111-42e1-919b-d490d583addd" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Balanço/C.L&amp;amp;P' /&gt;" SearchSteps="Selector" />
+                    </uix:NSAPSelectMenuItem.Target>
+                  </uix:NSAPSelectMenuItem>
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="452,375" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                    <ui:CommentOut.Body>
+                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,271" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ucas:SelectMenuItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" AlterIfDisabled="True" DisplayName="Select Menu Item 'saplogon.exe  Balanço/C...'" sap:VirtualizedContainerService.HintSize="354,183" sap2010:WorkflowViewState.IdRef="SelectMenuItem_1" Item="Lista/Exportar/Planilha eletrônica...">
+                          <ucas:SelectMenuItem.Items>
+                            <scg:List x:TypeArguments="x:String" Capacity="50">
+                              <x:String>Ir para/Chamar relatório...</x:String>
+                              <x:String>Ir para/Voltar</x:String>
+                              <x:String>Visões/SAP List Viewer</x:String>
+                              <x:String>Visões/Microsoft Excel</x:String>
+                              <x:String>Visões/Lotus 1-2-3</x:String>
+                              <x:String>Visões/Gráfico</x:String>
+                              <x:String>Configurações/Determinar lista expandida de totais...</x:String>
+                              <x:String>Configurações/Atrib.relatório...</x:String>
+                              <x:String>Sistema/Janela GUI nova</x:String>
+                              <x:String>Sistema/Fechar janela GUI</x:String>
+                              <x:String>Sistema/Serviços para objeto</x:String>
+                              <x:String>Sistema/Ordens spool próprias</x:String>
+                              <x:String>Sistema/Jobs próprios</x:String>
+                              <x:String>Sistema/Mensagem breve</x:String>
+                              <x:String>Sistema/Status...</x:String>
+                              <x:String>Sistema/Efetuar logoff</x:String>
+                              <x:String>Ajuda/Ajuda para aplicação</x:String>
+                              <x:String>Ajuda/Biblioteca SAP</x:String>
+                              <x:String>Ajuda/Glossário</x:String>
+                              <x:String>Ajuda/Infos de release</x:String>
+                              <x:String>Ajuda/SAP Service Marketplace</x:String>
+                              <x:String>Ajuda/Entrar mensagem do Service Desk</x:String>
+                              <x:String>Ajuda/Configurações...</x:String>
+                              <x:String>Lista/Exportar/Processamento de texto...</x:String>
+                              <x:String>Lista/Exportar/Planilha eletrônica...</x:String>
+                              <x:String>Lista/Exportar/File local...</x:String>
+                              <x:String>Lista/Exportar/Arquivo ampliado do SAP Query</x:String>
+                              <x:String>Lista/Exportar/Exportação XML...</x:String>
+                              <x:String>Lista/Enviar a/Destinatário do e-mail</x:String>
+                              <x:String>Lista/Enviar a/Pasta</x:String>
+                              <x:String>Processar/Calcular/Total</x:String>
+                              <x:String>Processar/Calcular/Valor médio</x:String>
+                              <x:String>Processar/Calcular/Mínimo</x:String>
+                              <x:String>Processar/Calcular/Máximo</x:String>
+                              <x:String>Processar/Calcular/Contar</x:String>
+                              <x:String>Configurações/Layout/Modificar...</x:String>
+                              <x:String>Configurações/Layout/Selecionar...</x:String>
+                              <x:String>Configurações/Layout/Gravar...</x:String>
+                              <x:String>Configurações/Layout/Administração de layouts</x:String>
+                              <x:String>Configurações/Colunas/Largura otimizada</x:String>
+                              <x:String>Configurações/Colunas/Fixar até coluna</x:String>
+                              <x:String>Configurações/Colunas/Anular fixação</x:String>
+                              <x:String>Sistema/Especificações do usuário/Manter dados</x:String>
+                              <x:String>Sistema/Especificações do usuário/Definir dados</x:String>
+                              <x:String>Sistema/Especificações do usuário/Eliminar dados</x:String>
+                              <x:String>Sistema/Especificações do usuário/Dados próprios</x:String>
+                              <x:String>Sistema/Especificações do usuário/Ampliar favoritos</x:String>
+                              <x:String>Sistema/Serviços/Reporting</x:String>
+                              <x:String>Sistema/Serviços/QuickViewer</x:String>
+                              <x:String>Sistema/Serviços/Controle de saída</x:String>
+                            </scg:List>
+                          </ucas:SelectMenuItem.Items>
+                          <ucas:SelectMenuItem.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="7a01f0e8-4f39-427a-b355-9c39fb0d9ed2" InformativeScreenshot="97bea992c829b64bb91f92a608821728">
+                              <ui:Target.TimeoutMS>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:Target.TimeoutMS>
+                              <ui:Target.WaitForReady>
+                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                              </ui:Target.WaitForReady>
+                            </ui:Target>
+                          </ucas:SelectMenuItem.Target>
+                        </ucas:SelectMenuItem>
+                      </Sequence>
+                    </ui:CommentOut.Body>
+                  </ui:CommentOut>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="-8, -8, 1936, 1056" ContentHash="26OorlcHh0qCgfPWEpABaQ" FilePath="D:\Program Files\SAP\FrontEnd\SAPgui\saplogon.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE1SURBVFhHY/j//z/jQOJRB4w6YNQBA+8Ap5rV7E7Vqw8OCK5ZU8jgVL2GE8j4PwB4rXPtGsGBcgDIcmFIFNDfAXDLwQ44dOqipWP16v+O1auohFcDLQFhwpaDHfD20/fP9198/E8NvPf8vf9+DTBHELYc7ID3X37+pwY+e/Pxf7+K2f/tShdhcwBWy6nmgAu3n/73Lp3x37Z4AbYoWA+0XBCb5SBMsQPOAy33LJ72365kITafr3epW4vTchCmyAEgn3uWTIdavgrZ4r/EWA7CDA+evy1tW7Lvf8uiXSTi3f99yoFxToHlIMxglTuD075i2X/78qUkY4fK5ejBDrbcuQ53nKNjahZEUJ8TbzkIU8sBJPschqnlAKLjHB1TXh3XrJlJruUgPNoiGnXAqANGugP+MwIA+QFnw3tJZtEAAAAASUVORK5CYII=" InformativeScreenshot="5c64a96754482f88a758b3b2edf130c1.png" Reference="lg5H7izgS0qA3fwFs2FUbQ/_oZ6sTZf3k6lpSofk22zBg" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Balanço/C.L&amp;amp;P' /&gt;" Title="Balanço/C.L&amp;P" Version="V1" />
+            </uix:NApplicationCard.TargetApp>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </uix:NApplicationCard>
+        </Sequence>
+      </ui:CommentOut.Body>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-    </uix:NApplicationCard>
+    </ui:CommentOut>
   </Sequence>
 </Activity>

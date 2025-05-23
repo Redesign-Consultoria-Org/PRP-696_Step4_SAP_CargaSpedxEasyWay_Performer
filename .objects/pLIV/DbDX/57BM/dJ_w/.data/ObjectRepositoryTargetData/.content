@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="PBVXYW8GFkWuKLbMWrxxMA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" CVScreenId="0823c3dc-3cea-4e91-b8bc-1ff47e2fd20e" CvTextArea="13, 38, 34, 12" CvTextArgument="Printer:" CvType="Text" DesignTimeRectangle="13, 38, 34, 12" DesignTimeScaleFactor="1" ElementType="Text" Guid="85d2037b-a7e6-4bf5-a828-180296ec1b56" ImageBase64="" ScopeSelectorArgument="&lt;wnd app='mstsc.exe' cls='RAIL_WINDOW' title='Print*' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="0823c3dc-3cea-4e91-b8bc-1ff47e2fd20e" CvTextArea="161, 8, 32, 14" CvTextArgument="Print" CvType="Text" DesignTimeRectangle="161, 8, 32, 14" ElementType="Text" Guid="d13b9553-fe5e-4f21-9ed1-3b64ccf32bc7" SearchSteps="CV" TargetType="ComputerVisionBased" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="9c77194d40e9419190e227a5ad7a9f3e.png" xmlns="">0HcVcoRNNg0-G-zn4qNw5kw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

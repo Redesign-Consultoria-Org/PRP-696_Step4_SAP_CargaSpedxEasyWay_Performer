@@ -1,11 +1,12 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="VerifyFields" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="in_strLocalFolder" Type="InArgument(x:String)" />
+    <x:Property Name="in_strDescription" Type="InArgument(x:String)" />
+    <x:Property Name="in_strFolderTemp" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1140,820</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1477,3119</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>VerifyFields_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -103,15 +104,15 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Esse  workflow é responsável por garantir que a configuração da extração o excel esteja correta.&#xD;&#xA;Campos marcados antes do download:&#xD;&#xA; -Columngeadings&#xD;&#xA; -Use  worksheet functions to represent subtctal fields in report&#xD;&#xA; -Column width based in objects in area&#xD;&#xA; -Details&#xD;&#xA; - Non-Tabular" DisplayName="VerifyFields" sap:VirtualizedContainerService.HintSize="416,686" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Esse  workflow é responsável por garantir que a configuração da extração o excel esteja correta e realização do download do arquivo Excel.&#xA;Campos marcados antes do download:&#xA; -Columngheadings&#xA; -Use  worksheet functions to represent subtctal fields in report&#xA; -Column width based in objects in area&#xA; -Details&#xA; - Non-Tabular" DisplayName="VerifyFields" sap:VirtualizedContainerService.HintSize="546,3014" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message inf init verify" sap:VirtualizedContainerService.HintSize="354,173" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;Iniciando verificação de configuração do arquivo&quot;]" />
-    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" Server="{x:Null}" sap2010:Annotation.AnnotationText="Por se tratar de um ambiente virtualizado, é necessário usar visão computacional para mapear os elementos." ApiKey="lMRuF0JXCDWxC4oxjXhJlchPzQJfByg8hFeFDlO0eqLVOIULcWnkHaKES96mze3wbTJoLrzZtV02BFi/4U+bTg==" CvMethod="ElementDetection, OCR" DesignTimeCacheId="a9522916-03c3-41fd-9432-f6f820cc60e7" DisplayName="CV Screen Scope 'VerifyFields" sap:VirtualizedContainerService.HintSize="354,129" sap2010:WorkflowViewState.IdRef="CVScope_1" SendOnPremData="False" Version="V6">
+    <ui:LogMessage DisplayName="Log Message inf init verify" sap:VirtualizedContainerService.HintSize="484,173" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;Iniciando verificação de configuração do arquivo&quot;]" />
+    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" Server="{x:Null}" sap2010:Annotation.AnnotationText="Por se tratar de um ambiente virtualizado, é necessário usar visão computacional para mapear os elementos." ApiKey="lMRuF0JXCDWxC4oxjXhJlchPzQJfByg8hFeFDlO0eqLVOIULcWnkHaKES96mze3wbTJoLrzZtV02BFi/4U+bTg==" CvMethod="ElementDetection, OCR" DesignTimeCacheId="a9522916-03c3-41fd-9432-f6f820cc60e7" DisplayName="CV Screen Scope 'VerifyFields" sap:VirtualizedContainerService.HintSize="484,2457" sap2010:WorkflowViewState.IdRef="CVScope_1" SendOnPremData="False" Version="V6">
       <p:CVScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -497,7 +498,7 @@
                 </ui:Target>
               </p:CvClickWithDescriptor.Target>
             </p:CvClickWithDescriptor>
-            <p:CvTypeIntoWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (138,407,831,24)&quot; +&#xA;&quot;Anchor: Text 'File name:' (81,413,55,12)&quot;]" DesignTimeCacheId="17b55af0-d822-44cc-9a4f-064d8faaa812" DesignTimeScaleFactor="1" DisplayName="CV Type Into - FileName" EmptyField="True" sap:VirtualizedContainerService.HintSize="450,208" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_1" InformativeScreenshot="24bfb2226367b7ba2984a03814fad09c" NumberOfScrolls="2" ScrollDirection="None" Text="[in_strLocalFolder + &quot;[k(enter)]&quot;]" Version="V6">
+            <p:CvTypeIntoWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (138,407,831,24)&quot; +&#xA;&quot;Anchor: Text 'File name:' (81,413,55,12)&quot;]" DesignTimeCacheId="17b55af0-d822-44cc-9a4f-064d8faaa812" DesignTimeScaleFactor="1" DisplayName="CV Type Into - FileName" EmptyField="True" sap:VirtualizedContainerService.HintSize="450,217" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_1" InformativeScreenshot="24bfb2226367b7ba2984a03814fad09c" NumberOfScrolls="2" ScrollDirection="None" Text="[in_strFolderTemp &amp;&quot;\&quot; &amp;  in_strDescription &amp; &quot;[k(enter)]&quot;]" Version="V6">
               <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
                 <uc:CvDescriptor Id="7b97c9fc-58ae-4188-8397-734475c295a8">
                   <uc:CvDescriptor.Anchors>
@@ -521,6 +522,46 @@
                 </ui:Target>
               </p:CvTypeIntoWithDescriptor.Target>
             </p:CvTypeIntoWithDescriptor>
+            <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (771,477,88,26)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Save' (802,483,26,12)&quot;]" DesignTimeCacheId="17b55af0-d822-44cc-9a4f-064d8faaa812" DesignTimeScaleFactor="1" DisplayName="CV Click - Save" sap:VirtualizedContainerService.HintSize="450,208" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_6" InformativeScreenshot="7d566b160e0063523cd1e850910e833c" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
+              <p:CvClickWithDescriptor.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </p:CvClickWithDescriptor.CursorPosition>
+              <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                <uc:CvDescriptor Id="5151d3ba-8365-48c0-8a4f-51b85f3d8c7b">
+                  <uc:CvDescriptor.Anchors>
+                    <x:Array Type="uc:CvElementDescriptor">
+                      <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="802, 483, 26, 12" ElementType="Text" Text="Save" />
+                    </x:Array>
+                  </uc:CvDescriptor.Anchors>
+                  <uc:CvDescriptor.Target>
+                    <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="771, 477, 88, 26" ElementType="Button" />
+                  </uc:CvDescriptor.Target>
+                </uc:CvDescriptor>
+              </p:CvClickWithDescriptor.DesignTimeDescriptor>
+              <p:CvClickWithDescriptor.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="69a6fd4c-3c30-4a3c-a72a-7d18f6fd6fd3">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </p:CvClickWithDescriptor.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </p:CvClickWithDescriptor>
           </Sequence>
         </ActivityAction>
       </p:CVScope.Body>
@@ -530,7 +571,7 @@
       <p:CVScope.DesignTimeCacheContainer>
         <uc:CvCacheContainer>
           <uc:CvCacheContainer.Caches>
-            <scg:List x:TypeArguments="uc:CVCache" Capacity="2">
+            <scg:List x:TypeArguments="uc:CVCache" Capacity="4">
               <uc:CVCache DataSent="False" DisplayName="Screen CV Element Exists - 'Co (Main)" Id="a9522916-03c3-41fd-9432-f6f820cc60e7" InformativeScreenshot="094953bb8baba8b5a3caead82ac8c355" LogicalPosition="446, 177" OcrText="Easy-SPED-Contábil - Versão 1.25 - Produção - [Rpa.Cargasped] - [Balancete] _ X Cadastros Movimentos Relatórios Especiais Utilitários Ajuda _ X Format Options X M ^ Column Headings Use worksheet functions to represent subtotal fields in report Data: 17/05/2025 - Set column width Balancete Mensal - Constant column width 10, 0100 - CCR S.A. Méslämo [006G], Página Column width based on objects in area Details Format Saldo do Mês Movimento a Movimento a Saldo A Anterior Débito Crédito Non-Tabular format Descrição Tabular format (Arrange all objects in one area into one row ) OK Cancel v &lt; &gt;" Position="446, 177" ScreenshotGuid="e6a082cf-8553-4977-9f75-fdf25677169f" ServerVersion="24.10.5.1">
                 <uc:CVCache.CvAnchorRelations>
                   <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="16">
@@ -1050,12 +1091,12 @@
       </p:CVScope.UseLocalServer>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </p:CVScope>
-    <ui:LogMessage DisplayName="Log Message inf verify fields end" sap:VirtualizedContainerService.HintSize="354,164" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;Verificação de campos finalizada&quot;]" />
+    <ui:LogMessage DisplayName="Log Message inf verify fields end" sap:VirtualizedContainerService.HintSize="484,164" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;Verificação de campos finalizada&quot;]" />
   </Sequence>
 </Activity>

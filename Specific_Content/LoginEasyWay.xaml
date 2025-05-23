@@ -34,7 +34,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1272,3489</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1477,1948</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>LoginEasyWay_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -157,7 +157,7 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="LoginEasyWay" sap:VirtualizedContainerService.HintSize="1282,3424" sap2010:WorkflowViewState.IdRef="Sequence_31">
+  <Sequence DisplayName="LoginEasyWay" sap:VirtualizedContainerService.HintSize="622,1883" sap2010:WorkflowViewState.IdRef="Sequence_31">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strUrl" />
       <Variable x:TypeArguments="x:String" Name="strUserNameNetwork" />
@@ -169,7 +169,7 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:RetryScope DisplayName="Retry Scope - Get Network credential" sap:VirtualizedContainerService.HintSize="1220,350" sap2010:WorkflowViewState.IdRef="RetryScope_6" NumberOfRetries="5" RetryInterval="00:00:01">
+    <ui:RetryScope DisplayName="Retry Scope - Get Network credential" sap:VirtualizedContainerService.HintSize="560,350" sap2010:WorkflowViewState.IdRef="RetryScope_6" NumberOfRetries="5" RetryInterval="00:00:01">
       <ui:RetryScope.ActivityBody>
         <ActivityAction>
           <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="[in_strOrchestratorWebPageCredentialName]" CacheStrategy="None" DisplayName="Get Credential 'Network'" FolderPath="[in_strOrchestratorFolder]" sap:VirtualizedContainerService.HintSize="334,143" sap2010:WorkflowViewState.IdRef="GetRobotCredential_3" Password="[strscrPasswordNetwork]" Username="[strUserNameNetWork]">
@@ -192,7 +192,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:RetryScope>
-    <ui:RetryScope DisplayName="Retry Scope - Get URL" sap:VirtualizedContainerService.HintSize="1220,350" sap2010:WorkflowViewState.IdRef="RetryScope_7">
+    <ui:RetryScope DisplayName="Retry Scope - Get URL" sap:VirtualizedContainerService.HintSize="560,350" sap2010:WorkflowViewState.IdRef="RetryScope_7">
       <ui:RetryScope.ActivityBody>
         <ActivityAction>
           <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="[in_strOrchestratorWebPageURLCredentialName]" CacheStrategy="None" DisplayName="Get Asset 'URL'" FolderPath="[in_strOrchestratorFolder]" sap:VirtualizedContainerService.HintSize="334,143" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
@@ -218,16 +218,16 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:RetryScope>
-    <ui:RetryScope sap2010:Annotation.AnnotationText="Retenta tdo o fluxo de login 5 vezes com interlavo de 2 segundo entre cada tentativa" DisplayName="Retry Scope Login completo" sap:VirtualizedContainerService.HintSize="1220,2636" sap2010:WorkflowViewState.IdRef="RetryScope_10" NumberOfRetries="5" RetryInterval="00:00:02">
+    <ui:RetryScope sap2010:Annotation.AnnotationText="Retenta tdo o fluxo de login 5 vezes com interlavo de 2 segundo entre cada tentativa" DisplayName="Retry Scope Login completo" sap:VirtualizedContainerService.HintSize="560,1095" sap2010:WorkflowViewState.IdRef="RetryScope_10" NumberOfRetries="5">
       <ui:RetryScope.ActivityBody>
         <ActivityAction>
-          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="1178,2407" sap2010:WorkflowViewState.IdRef="Sequence_59">
+          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="518,866" sap2010:WorkflowViewState.IdRef="Sequence_59">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <TryCatch sap2010:Annotation.AnnotationText="No blocho Try vai tentar realizar o login completo no sitema EasyWay&#xA; - Login no web site ;&#xA; - Login no RDP;&#xA; - Login no Sistema EasyWay&#xA;&#xA;No blocko Catches vai matar o chrome, matar a conexão do rdp e vai relançar a exceção para garantir a retentativa do login.&#xA;&#xA;Essa tratativa foi implementa para aumento de resilência e porque as vezes acontece de iniciar o login no RDP e a conexão com o  RDP cai abrir o sistema EasyWay" DisplayName="Try Catch Login completo" sap:VirtualizedContainerService.HintSize="1116,2319" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+            <TryCatch sap2010:Annotation.AnnotationText="No blocho Try vai tentar realizar o login completo no sitema EasyWay&#xA; - Login no web site ;&#xA; - Login no RDP;&#xA; - Login no Sistema EasyWay&#xA;&#xA;No blocko Catches vai matar o chrome, matar a conexão do rdp e vai relançar a exceção para garantir a retentativa do login.&#xA;&#xA;Essa tratativa foi implementa para aumento de resilência e porque as vezes acontece de iniciar o login no RDP e a conexão com o  RDP cai abrir o sistema EasyWay" DisplayName="Try Catch Login completo" sap:VirtualizedContainerService.HintSize="456,778" sap2010:WorkflowViewState.IdRef="TryCatch_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -236,14 +236,14 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <TryCatch.Try>
-                <Sequence sap:VirtualizedContainerService.HintSize="1078,1936" sap2010:WorkflowViewState.IdRef="Sequence_57">
+                <Sequence sap:VirtualizedContainerService.HintSize="512,1143" sap2010:WorkflowViewState.IdRef="Sequence_57">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence sap2010:Annotation.AnnotationText="Raliza login na web page para baixar RDP EasyWay" DisplayName="Login web Page EasyWay" sap:VirtualizedContainerService.HintSize="1016,88" sap2010:WorkflowViewState.IdRef="Sequence_40">
+                  <Sequence sap2010:Annotation.AnnotationText="Raliza login na web page para baixar RDP EasyWay" DisplayName="Login web Page EasyWay" sap:VirtualizedContainerService.HintSize="450,88" sap2010:WorkflowViewState.IdRef="Sequence_40">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -251,13 +251,13 @@
                         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: LoginWebPageEasyWay" sap:VirtualizedContainerService.HintSize="503,612" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="6b69a73c-5431-447c-847d-edae1156960d" Version="V2" WindowResize="Maximize">
+                    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: LoginWebPageEasyWay" sap:VirtualizedContainerService.HintSize="388,48" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="6b69a73c-5431-447c-847d-edae1156960d" Version="V2" WindowResize="Maximize">
                       <uix:NApplicationCard.Body>
                         <ActivityAction x:TypeArguments="x:Object">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="469,372" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="469,1308" sap2010:WorkflowViewState.IdRef="Sequence_39">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -342,15 +342,15 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </uix:NCheckState>
-                            <uix:NCheckState DisplayName="Check App State 'Verifica se ja está logado na rede EasyWay'" sap:VirtualizedContainerService.HintSize="407,50" sap2010:WorkflowViewState.IdRef="NCheckState_13" ScopeIdentifier="6b69a73c-5431-447c-847d-edae1156960d" Version="V3">
+                            <uix:NCheckState DisplayName="Check App State 'Verifica se ja está logado na rede EasyWay'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="407,57" sap2010:WorkflowViewState.IdRef="NCheckState_13" ScopeIdentifier="6b69a73c-5431-447c-847d-edae1156960d" Version="V3">
                               <uix:NCheckState.IfExists>
-                                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,1244" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,308" sap2010:WorkflowViewState.IdRef="Sequence_35">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Sign out web page'" sap:VirtualizedContainerService.HintSize="388,225" sap2010:WorkflowViewState.IdRef="NClick_14" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6b69a73c-5431-447c-847d-edae1156960d" Version="V3">
+                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Sign out web page'" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NClick_14" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6b69a73c-5431-447c-847d-edae1156960d" Version="V3">
                                     <uix:NClick.Target>
                                       <uix:TargetAnchorable BrowserURL="https://engeman-homolog.grupoccr.com.br/RDWeb/Pages/en-US/Default.aspx" DesignTimeRectangle="1333, 257, 55, 19" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl class='linkSecondaryNavigiationBar' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='PORTAL_SIGNOUT' tableRow='1' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl class='linkSecondaryNavigiationBar' tag='TABLE' /&gt;&lt;webctrl id='PORTAL_SIGNOUT' type='' tag='A' class='' aaname='Sign out' check:innerText='Sign out' /&gt;" Guid="de865d40-f28b-4cb2-b8eb-cfd0c0cb4a18" InformativeScreenshot="ad53b34c4a688f3e697e16234baa5b3c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RD Web Access' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
                                     </uix:NClick.Target>
@@ -365,199 +365,16 @@
                                       </uix:VerifyExecutionOptions>
                                     </uix:NClick.VerifyOptions>
                                   </uix:NClick>
-                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'User'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,286" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="6b69a73c-5431-447c-847d-edae1156960d" Text="[strUserNameNetWork]" Version="V3">
-                                    <uix:NTypeInto.Target>
-                                      <uix:TargetAnchorable BrowserURL="https://engeman-homolog.grupoccr.com.br/RDWeb/Pages/en-US/login.aspx?ReturnUrl=/RDWeb/Pages/en-US/Default.aspx" DesignTimeRectangle="650, 332, 183, 22" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl parentid='tableLoginForm' tableRow='2' tag='TABLE' /&gt;&lt;webctrl id='DomainUserName' tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='tableLoginForm' tag='TABLE' /&gt;&lt;webctrl id='DomainUserName' type='text' tag='INPUT' class='textInputField' aaname='' /&gt;" Guid="9a71d6ef-8cd9-451a-992b-318d166a3e1c" InformativeScreenshot="2d9c23607837d9bf3a854e7603dae430.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RD Web Access' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
-                                        <uix:TargetAnchorable.Anchors>
-                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                            <uix:Target DesignTimeRectangle="533, 332, 112, 22" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='tableLoginForm' tableRow='2' tag='TABLE' /&gt;&lt;webctrl id='tdDomainUserNameLabel' tableRow='1' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='tableLoginForm' tag='TABLE' /&gt;&lt;webctrl id='tdDomainUserNameLabel' type='' tag='TD' class='' aaname='Domain\user name:' check:innerText='Domain\user name:' /&gt;" Guid="c375a60e-34e3-4b25-93df-99a1f2aa1c90" SearchSteps="FuzzySelector" />
-                                          </scg:List>
-                                        </uix:TargetAnchorable.Anchors>
-                                      </uix:TargetAnchorable>
-                                    </uix:NTypeInto.Target>
-                                    <uix:NTypeInto.VerifyOptions>
-                                      <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
-                                        <uix:VerifyExecutionTypeIntoOptions.Retry>
-                                          <InArgument x:TypeArguments="x:Boolean" />
-                                        </uix:VerifyExecutionTypeIntoOptions.Retry>
-                                        <uix:VerifyExecutionTypeIntoOptions.Timeout>
-                                          <InArgument x:TypeArguments="x:Double" />
-                                        </uix:VerifyExecutionTypeIntoOptions.Timeout>
-                                      </uix:VerifyExecutionTypeIntoOptions>
-                                    </uix:NTypeInto.VerifyOptions>
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                  </uix:NTypeInto>
-                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,286" sap2010:WorkflowViewState.IdRef="NTypeInto_7" ScopeIdentifier="6b69a73c-5431-447c-847d-edae1156960d" SecureText="[strscrPasswordNetwork]" Version="V3">
-                                    <uix:NTypeInto.Target>
-                                      <uix:TargetAnchorable BrowserURL="https://engeman-homolog.grupoccr.com.br/RDWeb/Pages/en-US/login.aspx?ReturnUrl=/RDWeb/Pages/en-US/Default.aspx" DesignTimeRectangle="650, 361, 183, 22" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FullSelectorArgument="&lt;webctrl tableRow='5' tag='TABLE' /&gt;&lt;webctrl id='UserPass' tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='UserPass' type='password' tag='INPUT' class='textInputField' aaname='' /&gt;" Guid="18ec2441-833d-45b9-a8eb-165d472ba25f" InformativeScreenshot="29d7f4a7f65796ed14fb70780bbcdcb4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RD Web Access' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
-                                        <uix:TargetAnchorable.Anchors>
-                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                            <uix:Target DesignTimeRectangle="533, 361, 111, 22" ElementType="Text" FullSelectorArgument="&lt;webctrl tableRow='5' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='' aaname='Password:' check:innerText='Password:' /&gt;" Guid="6f43ed08-4f89-4cd2-861e-45aba138648a" SearchSteps="FuzzySelector" />
-                                          </scg:List>
-                                        </uix:TargetAnchorable.Anchors>
-                                      </uix:TargetAnchorable>
-                                    </uix:NTypeInto.Target>
-                                    <uix:NTypeInto.VerifyOptions>
-                                      <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
-                                        <uix:VerifyExecutionTypeIntoOptions.Retry>
-                                          <InArgument x:TypeArguments="x:Boolean" />
-                                        </uix:VerifyExecutionTypeIntoOptions.Retry>
-                                        <uix:VerifyExecutionTypeIntoOptions.Timeout>
-                                          <InArgument x:TypeArguments="x:Double" />
-                                        </uix:VerifyExecutionTypeIntoOptions.Timeout>
-                                      </uix:VerifyExecutionTypeIntoOptions>
-                                    </uix:NTypeInto.VerifyOptions>
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                  </uix:NTypeInto>
-                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Sign in'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_15" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6b69a73c-5431-447c-847d-edae1156960d" Version="V3">
-                                    <uix:NClick.Target>
-                                      <uix:TargetAnchorable BrowserURL="https://engeman-homolog.grupoccr.com.br/RDWeb/Pages/en-US/login.aspx?ReturnUrl=/RDWeb/Pages/en-US/Default.aspx" DesignTimeRectangle="780, 533, 53, 22" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl id='tableLoginForm' tableRow='12' tag='TABLE' /&gt;&lt;webctrl id='btnSignIn' tableRow='54' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='tableLoginForm' tag='TABLE' /&gt;&lt;webctrl id='btnSignIn' type='submit' tag='INPUT' class='formButton' aaname='Sign in' check:text='Sign in' /&gt;" Guid="4b0048f2-4a47-478c-857a-0d0621415108" InformativeScreenshot="6101a8c8c273e3aa19d9620edb6af8a4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RD Web Access' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
-                                    </uix:NClick.Target>
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                  </uix:NClick>
-                                  <ui:LogMessage DisplayName="Log Message Login again" sap:VirtualizedContainerService.HintSize="388,168" sap2010:WorkflowViewState.IdRef="LogMessage_28" Level="Info" Message="[&quot;Login realizado com Sucesso na pagina web rede EasyWay&quot;]">
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                  </ui:LogMessage>
                                 </Sequence>
                               </uix:NCheckState.IfExists>
                               <uix:NCheckState.IfNotExists>
-                                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="556,1015" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_38">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <uix:NCheckState DisplayName="Check App State 'check load'" EnableIfExists="False" sap:VirtualizedContainerService.HintSize="494,454" sap2010:WorkflowViewState.IdRef="NCheckState_12" ScopeIdentifier="6b69a73c-5431-447c-847d-edae1156960d" Version="V3">
-                                    <uix:NCheckState.IfExists>
-                                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,256" sap2010:WorkflowViewState.IdRef="Sequence_36">
-                                        <sap:WorkflowViewStateService.ViewState>
-                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                          </scg:Dictionary>
-                                        </sap:WorkflowViewStateService.ViewState>
-                                        <ui:LogMessage DisplayName="Log Message Carregou Correto" sap:VirtualizedContainerService.HintSize="388,168" sap2010:WorkflowViewState.IdRef="LogMessage_29" Level="Info" Message="[&quot;Rede Engeman carragou corretamente&quot;]" />
-                                      </Sequence>
-                                    </uix:NCheckState.IfExists>
-                                    <uix:NCheckState.IfNotExists>
-                                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,205" sap2010:WorkflowViewState.IdRef="Sequence_37">
-                                        <sap:WorkflowViewStateService.ViewState>
-                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                          </scg:Dictionary>
-                                        </sap:WorkflowViewStateService.ViewState>
-                                        <Throw DisplayName="Throw Erro Rede Engeman (SE)" Exception="[New SystemException(&quot;Erro: Não foi possível autenticar na rede Engeman&quot;)]" sap:VirtualizedContainerService.HintSize="388,115" sap2010:WorkflowViewState.IdRef="Throw_4" />
-                                      </Sequence>
-                                    </uix:NCheckState.IfNotExists>
-                                    <uix:NCheckState.Target>
-                                      <uix:TargetAnchorable BrowserURL="https://engeman-homolog.grupoccr.com.br/RDWeb/Pages/en-US/login.aspx?ReturnUrl=/RDWeb/Pages/en-US/Default.aspx" DesignTimeRectangle="533, 332, 112, 22" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='tableLoginForm' tableRow='2' tag='TABLE' /&gt;&lt;webctrl id='tdDomainUserNameLabel' tableRow='1' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='tableLoginForm' tag='TABLE' /&gt;&lt;webctrl id='tdDomainUserNameLabel' type='' tag='TD' class='' aaname='Domain\user name:' check:innerText='Domain\user name:' /&gt;" Guid="e1d02cf7-86f9-4287-a3c5-45b6bf702c49" InformativeScreenshot="1dfb588e6f7f47ed0284cc52b4623ebc.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RD Web Access' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
-                                        <uix:TargetAnchorable.Anchors>
-                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                            <uix:Target DesignTimeRectangle="533, 361, 300, 22" ElementType="Text" FullSelectorArgument="&lt;webctrl tableRow='5' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='' aaname='Password:' check:innerText='Password:' /&gt;" Guid="9856007e-fb5b-475d-a3d4-c66b0f0d33bb" SearchSteps="FuzzySelector" />
-                                          </scg:List>
-                                        </uix:TargetAnchorable.Anchors>
-                                      </uix:TargetAnchorable>
-                                    </uix:NCheckState.Target>
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                  </uix:NCheckState>
-                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'User'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="494,57" sap2010:WorkflowViewState.IdRef="NTypeInto_8" ScopeIdentifier="6b69a73c-5431-447c-847d-edae1156960d" Text="[strUserNameNetWork]" Version="V3">
-                                    <uix:NTypeInto.Target>
-                                      <uix:TargetAnchorable BrowserURL="https://engeman-homolog.grupoccr.com.br/RDWeb/Pages/en-US/login.aspx?ReturnUrl=/RDWeb/Pages/en-US/Default.aspx" DesignTimeRectangle="650, 332, 183, 22" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl parentid='tableLoginForm' tableRow='2' tag='TABLE' /&gt;&lt;webctrl id='DomainUserName' tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='tableLoginForm' tag='TABLE' /&gt;&lt;webctrl id='DomainUserName' type='text' tag='INPUT' class='textInputField' aaname='' /&gt;" Guid="9a71d6ef-8cd9-451a-992b-318d166a3e1c" InformativeScreenshot="2d9c23607837d9bf3a854e7603dae430.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RD Web Access' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
-                                        <uix:TargetAnchorable.Anchors>
-                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                            <uix:Target DesignTimeRectangle="533, 332, 112, 22" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='tableLoginForm' tableRow='2' tag='TABLE' /&gt;&lt;webctrl id='tdDomainUserNameLabel' tableRow='1' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='tableLoginForm' tag='TABLE' /&gt;&lt;webctrl id='tdDomainUserNameLabel' type='' tag='TD' class='' aaname='Domain\user name:' check:innerText='Domain\user name:' /&gt;" Guid="c375a60e-34e3-4b25-93df-99a1f2aa1c90" SearchSteps="FuzzySelector" />
-                                          </scg:List>
-                                        </uix:TargetAnchorable.Anchors>
-                                      </uix:TargetAnchorable>
-                                    </uix:NTypeInto.Target>
-                                    <uix:NTypeInto.VerifyOptions>
-                                      <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
-                                        <uix:VerifyExecutionTypeIntoOptions.Retry>
-                                          <InArgument x:TypeArguments="x:Boolean" />
-                                        </uix:VerifyExecutionTypeIntoOptions.Retry>
-                                        <uix:VerifyExecutionTypeIntoOptions.Timeout>
-                                          <InArgument x:TypeArguments="x:Double" />
-                                        </uix:VerifyExecutionTypeIntoOptions.Timeout>
-                                      </uix:VerifyExecutionTypeIntoOptions>
-                                    </uix:NTypeInto.VerifyOptions>
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                  </uix:NTypeInto>
-                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="494,57" sap2010:WorkflowViewState.IdRef="NTypeInto_9" ScopeIdentifier="6b69a73c-5431-447c-847d-edae1156960d" SecureText="[strscrPasswordNetwork]" Version="V3">
-                                    <uix:NTypeInto.Target>
-                                      <uix:TargetAnchorable BrowserURL="https://engeman-homolog.grupoccr.com.br/RDWeb/Pages/en-US/login.aspx?ReturnUrl=/RDWeb/Pages/en-US/Default.aspx" DesignTimeRectangle="650, 361, 183, 22" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FullSelectorArgument="&lt;webctrl tableRow='5' tag='TABLE' /&gt;&lt;webctrl id='UserPass' tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='UserPass' type='password' tag='INPUT' class='textInputField' aaname='' /&gt;" Guid="18ec2441-833d-45b9-a8eb-165d472ba25f" InformativeScreenshot="29d7f4a7f65796ed14fb70780bbcdcb4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RD Web Access' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
-                                        <uix:TargetAnchorable.Anchors>
-                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                            <uix:Target DesignTimeRectangle="533, 361, 111, 22" ElementType="Text" FullSelectorArgument="&lt;webctrl tableRow='5' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='' aaname='Password:' check:innerText='Password:' /&gt;" Guid="6f43ed08-4f89-4cd2-861e-45aba138648a" SearchSteps="FuzzySelector" />
-                                          </scg:List>
-                                        </uix:TargetAnchorable.Anchors>
-                                      </uix:TargetAnchorable>
-                                    </uix:NTypeInto.Target>
-                                    <uix:NTypeInto.VerifyOptions>
-                                      <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
-                                        <uix:VerifyExecutionTypeIntoOptions.Retry>
-                                          <InArgument x:TypeArguments="x:Boolean" />
-                                        </uix:VerifyExecutionTypeIntoOptions.Retry>
-                                        <uix:VerifyExecutionTypeIntoOptions.Timeout>
-                                          <InArgument x:TypeArguments="x:Double" />
-                                        </uix:VerifyExecutionTypeIntoOptions.Timeout>
-                                      </uix:VerifyExecutionTypeIntoOptions>
-                                    </uix:NTypeInto.VerifyOptions>
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                  </uix:NTypeInto>
-                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Sign in'" sap:VirtualizedContainerService.HintSize="494,189" sap2010:WorkflowViewState.IdRef="NClick_16" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6b69a73c-5431-447c-847d-edae1156960d" Version="V3">
-                                    <uix:NClick.Target>
-                                      <uix:TargetAnchorable BrowserURL="https://engeman-homolog.grupoccr.com.br/RDWeb/Pages/en-US/login.aspx?ReturnUrl=/RDWeb/Pages/en-US/Default.aspx" DesignTimeRectangle="780, 533, 53, 22" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl id='tableLoginForm' tableRow='12' tag='TABLE' /&gt;&lt;webctrl id='btnSignIn' tableRow='54' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='tableLoginForm' tag='TABLE' /&gt;&lt;webctrl id='btnSignIn' type='submit' tag='INPUT' class='formButton' aaname='Sign in' check:text='Sign in' /&gt;" Guid="4b0048f2-4a47-478c-857a-0d0621415108" InformativeScreenshot="6101a8c8c273e3aa19d9620edb6af8a4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RD Web Access' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
-                                    </uix:NClick.Target>
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                  </uix:NClick>
-                                  <ui:LogMessage DisplayName="Log Message Login sucess" sap:VirtualizedContainerService.HintSize="494,168" sap2010:WorkflowViewState.IdRef="LogMessage_30" Level="Info" Message="[&quot;Login realizado com Sucesso na pagina web rede EasyWay&quot;]">
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                  </ui:LogMessage>
                                 </Sequence>
                               </uix:NCheckState.IfNotExists>
                               <uix:NCheckState.Target>
@@ -570,21 +387,94 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </uix:NCheckState>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'User'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="407,286" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="6b69a73c-5431-447c-847d-edae1156960d" Text="[strUserNameNetWork]" Version="V3">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable BrowserURL="https://engeman-homolog.grupoccr.com.br/RDWeb/Pages/en-US/login.aspx?ReturnUrl=/RDWeb/Pages/en-US/Default.aspx" DesignTimeRectangle="650, 332, 183, 22" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl parentid='tableLoginForm' tableRow='2' tag='TABLE' /&gt;&lt;webctrl id='DomainUserName' tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='tableLoginForm' tag='TABLE' /&gt;&lt;webctrl id='DomainUserName' type='text' tag='INPUT' class='textInputField' aaname='' /&gt;" Guid="9a71d6ef-8cd9-451a-992b-318d166a3e1c" InformativeScreenshot="2d9c23607837d9bf3a854e7603dae430.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RD Web Access' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                      <uix:Target DesignTimeRectangle="533, 332, 112, 22" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='tableLoginForm' tableRow='2' tag='TABLE' /&gt;&lt;webctrl id='tdDomainUserNameLabel' tableRow='1' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='tableLoginForm' tag='TABLE' /&gt;&lt;webctrl id='tdDomainUserNameLabel' type='' tag='TD' class='' aaname='Domain\user name:' check:innerText='Domain\user name:' /&gt;" Guid="c375a60e-34e3-4b25-93df-99a1f2aa1c90" SearchSteps="FuzzySelector" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NTypeInto.Target>
+                              <uix:NTypeInto.VerifyOptions>
+                                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                    <InArgument x:TypeArguments="x:Boolean" />
+                                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                    <InArgument x:TypeArguments="x:Double" />
+                                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                </uix:VerifyExecutionTypeIntoOptions>
+                              </uix:NTypeInto.VerifyOptions>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </uix:NTypeInto>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="407,286" sap2010:WorkflowViewState.IdRef="NTypeInto_7" ScopeIdentifier="6b69a73c-5431-447c-847d-edae1156960d" SecureText="[strscrPasswordNetwork]" Version="V3">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable BrowserURL="https://engeman-homolog.grupoccr.com.br/RDWeb/Pages/en-US/login.aspx?ReturnUrl=/RDWeb/Pages/en-US/Default.aspx" DesignTimeRectangle="650, 361, 183, 22" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FullSelectorArgument="&lt;webctrl tableRow='5' tag='TABLE' /&gt;&lt;webctrl id='UserPass' tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='UserPass' type='password' tag='INPUT' class='textInputField' aaname='' /&gt;" Guid="18ec2441-833d-45b9-a8eb-165d472ba25f" InformativeScreenshot="29d7f4a7f65796ed14fb70780bbcdcb4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RD Web Access' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                      <uix:Target DesignTimeRectangle="533, 361, 111, 22" ElementType="Text" FullSelectorArgument="&lt;webctrl tableRow='5' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='' aaname='Password:' check:innerText='Password:' /&gt;" Guid="6f43ed08-4f89-4cd2-861e-45aba138648a" SearchSteps="FuzzySelector" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NTypeInto.Target>
+                              <uix:NTypeInto.VerifyOptions>
+                                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                    <InArgument x:TypeArguments="x:Boolean" />
+                                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                    <InArgument x:TypeArguments="x:Double" />
+                                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                </uix:VerifyExecutionTypeIntoOptions>
+                              </uix:NTypeInto.VerifyOptions>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </uix:NTypeInto>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Sign in'" sap:VirtualizedContainerService.HintSize="407,189" sap2010:WorkflowViewState.IdRef="NClick_15" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6b69a73c-5431-447c-847d-edae1156960d" Version="V3">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable BrowserURL="https://engeman-homolog.grupoccr.com.br/RDWeb/Pages/en-US/login.aspx?ReturnUrl=/RDWeb/Pages/en-US/Default.aspx" DesignTimeRectangle="780, 533, 53, 22" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl id='tableLoginForm' tableRow='12' tag='TABLE' /&gt;&lt;webctrl id='btnSignIn' tableRow='54' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='tableLoginForm' tag='TABLE' /&gt;&lt;webctrl id='btnSignIn' type='submit' tag='INPUT' class='formButton' aaname='Sign in' check:text='Sign in' /&gt;" Guid="4b0048f2-4a47-478c-857a-0d0621415108" InformativeScreenshot="6101a8c8c273e3aa19d9620edb6af8a4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RD Web Access' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
+                              </uix:NClick.Target>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </uix:NClick>
+                            <ui:LogMessage DisplayName="Log Message Login again" sap:VirtualizedContainerService.HintSize="407,168" sap2010:WorkflowViewState.IdRef="LogMessage_28" Level="Info" Message="[&quot;Login realizado com Sucesso na pagina web rede EasyWay&quot;]">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:LogMessage>
                           </Sequence>
                         </ActivityAction>
                       </uix:NApplicationCard.Body>
                       <uix:NApplicationCard.TargetApp>
-                        <uix:TargetApp Area="-8, -8, 1936, 1056" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="c288282b302f1d6e2604a2bfeedcf8c0.jpg" Selector="&lt;html app='chrome.exe' title='Easy Remote App' /&gt;" Title="The resource cannot be found." Url="https://easy.grupoccr.com.br/RDWeb/Pages/en-US/login.aspx" />
+                        <uix:TargetApp Area="-8, -8, 1936, 1056" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="c288282b302f1d6e2604a2bfeedcf8c0.jpg" Selector="&lt;html app='chrome.exe' title='Easy Remote App' /&gt;" Title="The resource cannot be found." Url="[strUrl]" />
                       </uix:NApplicationCard.TargetApp>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NApplicationCard>
                   </Sequence>
-                  <Sequence sap2010:Annotation.AnnotationText="- Verifica o ambientepara abrir o arquivo .rdp já configurado para acessar o ambiente do Engeman " DisplayName="LoginRDP" sap:VirtualizedContainerService.HintSize="1016,99" sap2010:WorkflowViewState.IdRef="Sequence_66">
+                  <Sequence sap2010:Annotation.AnnotationText="- Verifica o ambientepara abrir o arquivo .rdp já configurado para acessar o ambiente do EasyWay" DisplayName="LoginRDP" sap:VirtualizedContainerService.HintSize="450,99" sap2010:WorkflowViewState.IdRef="Sequence_66">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -592,7 +482,7 @@
                         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:LogMessage DisplayName="Log Message RDP" sap:VirtualizedContainerService.HintSize="388,173" sap2010:WorkflowViewState.IdRef="LogMessage_31" Level="Info" Message="[&quot;Iniciando login no RDP&quot;]">
+                    <ui:LogMessage DisplayName="Log Message RDP" sap:VirtualizedContainerService.HintSize="497,173" sap2010:WorkflowViewState.IdRef="LogMessage_31" Level="Info" Message="[&quot;Iniciando login no RDP&quot;]">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -600,13 +490,13 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:LogMessage>
-                    <Switch x:TypeArguments="x:String" DisplayName="Switch RDP-EasyWay Environment" Expression="[in_strEnvironment]" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+                    <Switch x:TypeArguments="x:String" DisplayName="Switch RDP-EasyWay Environment" Expression="[in_strEnvironment]" sap:VirtualizedContainerService.HintSize="497,192" sap2010:WorkflowViewState.IdRef="Switch`1_2">
                       <Switch.Default>
                         <Throw DisplayName="Throw BRE - Environment Not Mapped" Exception="[New BusinessRuleException(&#xA;&#x9;String.Format(&#xA;&#x9;&#x9;&quot;Ambiente: {0}, não mapeado para inicialização do RDP Engeman&quot;,&#xA;&#x9;&#x9;in_strEnvironment&#xA;&#x9;)&#xA;)]" sap:VirtualizedContainerService.HintSize="334,90" sap2010:WorkflowViewState.IdRef="Throw_5" />
                       </Switch.Default>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
@@ -627,7 +517,7 @@
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:StartProcess>
                     </Switch>
-                    <uix:NCheckState DisplayName="Check App State 'Pop up Conexão não verificada'" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="NCheckState_14" Version="V3">
+                    <uix:NCheckState DisplayName="Check App State 'Pop up Conexão não verificada'" sap:VirtualizedContainerService.HintSize="497,57" sap2010:WorkflowViewState.IdRef="NCheckState_14" Version="V3">
                       <uix:NCheckState.IfExists>
                         <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,1174" sap2010:WorkflowViewState.IdRef="NApplicationCard_7" ScopeGuid="e9689cf0-31f0-456e-8f8d-412da1b9287d" Version="V2">
                           <uix:NApplicationCard.Body>
@@ -694,7 +584,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NCheckState>
-                    <uix:NCheckState DisplayName="Check App State 'Verifica pop up Pop up cannot be verified'" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="NCheckState_15" Version="V3">
+                    <uix:NCheckState DisplayName="Check App State 'Verifica pop up Pop up cannot be verified'" sap:VirtualizedContainerService.HintSize="497,57" sap2010:WorkflowViewState.IdRef="NCheckState_15" Version="V3">
                       <uix:NCheckState.IfExists>
                         <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: RemoteApp Target appears" sap:VirtualizedContainerService.HintSize="450,1174" sap2010:WorkflowViewState.IdRef="NApplicationCard_8" ScopeGuid="b8ddefff-170a-4965-81b9-1b86685100c2" Version="V2">
                           <uix:NApplicationCard.Body>
@@ -779,7 +669,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NCheckState>
-                    <uix:NCheckState DisplayName="Check App State 'Verifica pop up'" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="NCheckState_16" Version="V3">
+                    <uix:NCheckState DisplayName="Check App State 'Verifica pop up'" sap:VirtualizedContainerService.HintSize="497,57" sap2010:WorkflowViewState.IdRef="NCheckState_16" Version="V3">
                       <uix:NCheckState.IfExists>
                         <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application/Browser Target appears" sap:VirtualizedContainerService.HintSize="450,1174" sap2010:WorkflowViewState.IdRef="NApplicationCard_9" ScopeGuid="3620960c-8d1f-4056-a8c5-4a8468eb6a28" Version="V2">
                           <uix:NApplicationCard.Body>
@@ -852,7 +742,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NCheckState>
-                    <uix:NCheckState DisplayName="Check App State 'Verifica janela Enter your credentials'" sap:VirtualizedContainerService.HintSize="388,48" sap2010:WorkflowViewState.IdRef="NCheckState_17" Version="V3">
+                    <uix:NCheckState DisplayName="Check App State 'Verifica janela Enter your credentials'" sap:VirtualizedContainerService.HintSize="497,48" sap2010:WorkflowViewState.IdRef="NCheckState_17" Version="V3">
                       <uix:NCheckState.IfExists>
                         <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: 'Target appears Windows Security'" sap:VirtualizedContainerService.HintSize="450,1046" sap2010:WorkflowViewState.IdRef="NApplicationCard_10" ScopeGuid="d70869c2-cd89-4d6d-90a8-e735e9eb8f05" Version="V2">
                           <uix:NApplicationCard.Body>
@@ -924,7 +814,7 @@
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NCheckState>
                   </Sequence>
-                  <Sequence sap2010:Annotation.AnnotationText="- Verifica se aparece pop up de segurança do Open File.&#xA;- Realiza o Login no Sistema EasyWay.&#xA;- Se login for realizado com sucesso informa com log, se não for realizado lança uma exceção informando que não foi possível realizar o login." DisplayName="Login EasyWay" sap:VirtualizedContainerService.HintSize="1016,1661" sap2010:WorkflowViewState.IdRef="Sequence_64">
+                  <Sequence sap2010:Annotation.AnnotationText="- Verifica se aparece pop up de segurança do Open File.&#xA;- Realiza o Login no Sistema EasyWay.&#xA;- Se login for realizado com sucesso informa com log, se não for realizado lança uma exceção informando que não foi possível realizar o login." DisplayName="Login EasyWay" sap:VirtualizedContainerService.HintSize="450,868" sap2010:WorkflowViewState.IdRef="Sequence_64">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="ss:SecureString" Name="strscrPasswordEngeman" />
                       <Variable x:TypeArguments="x:String" Name="strUserEngeman" />
@@ -936,8 +826,8 @@
                         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:LogMessage DisplayName="Log Message Start EasyWay" sap:VirtualizedContainerService.HintSize="954,173" sap2010:WorkflowViewState.IdRef="LogMessage_24" Level="Info" Message="[&quot;Iniciando login EasyWay&quot;]" />
-                    <ui:RetryScope DisplayName="Retry Scope - Get Credential Engeman" sap:VirtualizedContainerService.HintSize="954,350" sap2010:WorkflowViewState.IdRef="RetryScope_8">
+                    <ui:LogMessage DisplayName="Log Message Start EasyWay" sap:VirtualizedContainerService.HintSize="388,173" sap2010:WorkflowViewState.IdRef="LogMessage_24" Level="Info" Message="[&quot;Iniciando login EasyWay&quot;]" />
+                    <ui:RetryScope DisplayName="Retry Scope - Get Credential Engeman" sap:VirtualizedContainerService.HintSize="388,350" sap2010:WorkflowViewState.IdRef="RetryScope_8">
                       <ui:RetryScope.ActivityBody>
                         <ActivityAction>
                           <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="[in_strOrchestratorEasyWayCredentialName]" CacheStrategy="None" DisplayName="Get Credential Engeman" FolderPath="[in_strOrchestratorFolder]" sap:VirtualizedContainerService.HintSize="334,143" sap2010:WorkflowViewState.IdRef="GetRobotCredential_4" Password="[strscrPasswordEngeman]" Username="[strUserEngeman]" />
@@ -953,22 +843,22 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:RetryScope>
-                    <uix:NCheckState DisplayName="Check App State 'Verifica Pop up Open File  - Serucryti'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="954,57" sap2010:WorkflowViewState.IdRef="NCheckState_19" Timeout="3" Version="V4">
+                    <uix:NCheckState DisplayName="Check App State 'Verifica Pop up Open File  - Serucryti'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="NCheckState_19" Timeout="3" Version="V4">
                       <uix:NCheckState.IfExists>
-                        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="496,643" sap2010:WorkflowViewState.IdRef="Sequence_51">
+                        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="496,641" sap2010:WorkflowViewState.IdRef="Sequence_51">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" Server="{x:Null}" ApiKey="lMRuF0JXCDWxC4oxjXhJlchPzQJfByg8hFeFDlO0eqLVOIULcWnkHaKES96mze3wbTJoLrzZtV02BFi/4U+bTg==" CvMethod="ElementDetection, OCR" DesignTimeCacheId="043bc0a6-cab3-43ad-9a2a-d2ab50621eea" DisplayName="CV Screen Scope 'mstsc.exe Open Pop up'" sap:VirtualizedContainerService.HintSize="434,553" sap2010:WorkflowViewState.IdRef="CVScope_5" SendOnPremData="False" Version="V6">
+                          <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" Server="{x:Null}" ApiKey="lMRuF0JXCDWxC4oxjXhJlchPzQJfByg8hFeFDlO0eqLVOIULcWnkHaKES96mze3wbTJoLrzZtV02BFi/4U+bTg==" CvMethod="ElementDetection, OCR" DesignTimeCacheId="043bc0a6-cab3-43ad-9a2a-d2ab50621eea" DisplayName="CV Screen Scope 'mstsc.exe Open Pop up'" sap:VirtualizedContainerService.HintSize="434,551" sap2010:WorkflowViewState.IdRef="CVScope_5" SendOnPremData="False" Version="V6">
                             <p:CVScope.Body>
                               <ActivityAction x:TypeArguments="x:Object">
                                 <ActivityAction.Argument>
                                   <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
                                 </ActivityAction.Argument>
                                 <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_50">
-                                  <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (253,194,91,25)&quot; +&#xA;&quot;Anchor: Text 'Run' (287,200,22,12)&quot;]" DesignTimeCacheId="043bc0a6-cab3-43ad-9a2a-d2ab50621eea" DesignTimeScaleFactor="1" DisplayName="CV Click - Button" sap:VirtualizedContainerService.HintSize="400,210" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_5" InformativeScreenshot="8feb9f0e89f5f54393dabfa422401f05" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
+                                  <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (253,194,91,25)&quot; +&#xA;&quot;Anchor: Text 'Run' (287,200,22,12)&quot;]" DesignTimeCacheId="043bc0a6-cab3-43ad-9a2a-d2ab50621eea" DesignTimeScaleFactor="1" DisplayName="CV Click - Button" sap:VirtualizedContainerService.HintSize="400,208" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_5" InformativeScreenshot="8feb9f0e89f5f54393dabfa422401f05" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
                                     <p:CvClickWithDescriptor.CursorPosition>
                                       <ui:CursorPosition Position="Center">
                                         <ui:CursorPosition.OffsetX>
@@ -1209,17 +1099,17 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NCheckState>
-                    <ui:RetryScope DisplayName="Retry Scope - Tela de Login Engeman" sap:VirtualizedContainerService.HintSize="954,415" sap2010:WorkflowViewState.IdRef="RetryScope_9" NumberOfRetries="5" RetryInterval="00:00:01">
+                    <ui:RetryScope DisplayName="Retry Scope - Tela de Login EasyWay" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="RetryScope_9" NumberOfRetries="5" RetryInterval="00:00:01">
                       <ui:RetryScope.ActivityBody>
                         <ActivityAction>
-                          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="416,208" sap2010:WorkflowViewState.IdRef="Sequence_54">
+                          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="496,1252" sap2010:WorkflowViewState.IdRef="Sequence_54">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" Server="{x:Null}" sap2010:Annotation.AnnotationText="Por se tratar de um ambiente virtualizado, é necessário usar visão computacional para mapear os elementos." ApiKey="lMRuF0JXCDWxC4oxjXhJlchPzQJfByg8hFeFDlO0eqLVOIULcWnkHaKES96mze3wbTJoLrzZtV02BFi/4U+bTg==" CvMethod="ElementDetection, OCR" DesignTimeCacheId="6334ee2a-fd52-444b-8c4c-d8109ac41fba" DisplayName="CV Screen Scope 'mstsc.exe Easy-SPED'" sap:VirtualizedContainerService.HintSize="354,120" sap2010:WorkflowViewState.IdRef="CVScope_7" SendOnPremData="False" Version="V6">
+                            <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" Server="{x:Null}" sap2010:Annotation.AnnotationText="Por se tratar de um ambiente virtualizado, é necessário usar visão computacional para mapear os elementos." ApiKey="lMRuF0JXCDWxC4oxjXhJlchPzQJfByg8hFeFDlO0eqLVOIULcWnkHaKES96mze3wbTJoLrzZtV02BFi/4U+bTg==" CvMethod="ElementDetection, OCR" DesignTimeCacheId="6334ee2a-fd52-444b-8c4c-d8109ac41fba" DisplayName="CV Screen Scope 'mstsc.exe Easy-SPED'" sap:VirtualizedContainerService.HintSize="434,1164" sap2010:WorkflowViewState.IdRef="CVScope_7" SendOnPremData="False" Version="V6">
                               <p:CVScope.Body>
                                 <ActivityAction x:TypeArguments="x:Object">
                                   <ActivityAction.Argument>
@@ -1247,7 +1137,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:Activate>
-                                    <p:CvTypeIntoWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (472,368,149,21)&quot; +&#xA;&quot;Anchor: Text 'Usuário' (427,371,39,12)&quot;]" DesignTimeCacheId="6334ee2a-fd52-444b-8c4c-d8109ac41fba" DesignTimeScaleFactor="1" DisplayName="CV Type Into - Usuário" EmptyField="True" sap:VirtualizedContainerService.HintSize="400,219" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_5" InformativeScreenshot="cf60d4920ed16b992df1887fbe3135b8" NumberOfScrolls="2" ScrollDirection="None" Text="[strUserEngeman]" Version="V6">
+                                    <p:CvTypeIntoWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (472,368,149,21)&quot; +&#xA;&quot;Anchor: Text 'Usuário' (427,371,39,12)&quot;]" DesignTimeCacheId="6334ee2a-fd52-444b-8c4c-d8109ac41fba" DesignTimeScaleFactor="1" DisplayName="CV Type Into - Usuário" EmptyField="True" sap:VirtualizedContainerService.HintSize="400,217" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_5" InformativeScreenshot="cf60d4920ed16b992df1887fbe3135b8" NumberOfScrolls="2" ScrollDirection="None" Text="[strUserEngeman]" Version="V6">
                                       <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
                                         <uc:CvDescriptor Id="f0ded1c8-1038-4202-949f-a89b20520caa">
                                           <uc:CvDescriptor.Anchors>
@@ -1271,7 +1161,7 @@
                                         </ui:Target>
                                       </p:CvTypeIntoWithDescriptor.Target>
                                     </p:CvTypeIntoWithDescriptor>
-                                    <p:CvTypeIntoWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (472,415,90,21)&quot; +&#xA;&quot;Anchor: Text 'Senha' (435,420,33,11)&quot;]" DesignTimeCacheId="6334ee2a-fd52-444b-8c4c-d8109ac41fba" DesignTimeScaleFactor="1" DisplayName="CV Type Into - Senha" EmptyField="True" sap:VirtualizedContainerService.HintSize="400,219" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_6" InformativeScreenshot="e8ec4fcc9965111c4c49a8daa24b88da" NumberOfScrolls="2" ScrollDirection="None" Text="[strscrPasswordEngeman]" Version="V6">
+                                    <p:CvTypeIntoWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (472,415,90,21)&quot; +&#xA;&quot;Anchor: Text 'Senha' (435,420,33,11)&quot;]" DesignTimeCacheId="6334ee2a-fd52-444b-8c4c-d8109ac41fba" DesignTimeScaleFactor="1" DisplayName="CV Type Into - Senha" EmptyField="True" sap:VirtualizedContainerService.HintSize="400,217" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_6" InformativeScreenshot="e8ec4fcc9965111c4c49a8daa24b88da" NumberOfScrolls="2" ScrollDirection="None" Text="[strscrPasswordEngeman]" Version="V6">
                                       <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
                                         <uc:CvDescriptor Id="bf02e9af-861c-4b65-b259-369591173c6f">
                                           <uc:CvDescriptor.Anchors>
@@ -1295,7 +1185,7 @@
                                         </ui:Target>
                                       </p:CvTypeIntoWithDescriptor.Target>
                                     </p:CvTypeIntoWithDescriptor>
-                                    <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Text 'OK' (607,469,17,12)&quot; +&#xA;&quot;Anchor: Button (567,463,76,26)&quot;]" DesignTimeCacheId="6334ee2a-fd52-444b-8c4c-d8109ac41fba" DesignTimeScaleFactor="1" DisplayName="CV Click - Ok" sap:VirtualizedContainerService.HintSize="400,210" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_7" InformativeScreenshot="6a5c3e7444108abe3734e32647fec8e0" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
+                                    <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Text 'OK' (607,469,17,12)&quot; +&#xA;&quot;Anchor: Button (567,463,76,26)&quot;]" DesignTimeCacheId="6334ee2a-fd52-444b-8c4c-d8109ac41fba" DesignTimeScaleFactor="1" DisplayName="CV Click - Ok" sap:VirtualizedContainerService.HintSize="400,208" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_7" InformativeScreenshot="6a5c3e7444108abe3734e32647fec8e0" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
                                       <p:CvClickWithDescriptor.CursorPosition>
                                         <ui:CursorPosition Position="Center">
                                           <ui:CursorPosition.OffsetX>
@@ -1466,7 +1356,7 @@
                               </p:CVScope.UseLocalServer>
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                 </scg:Dictionary>
@@ -1480,12 +1370,12 @@
                       </ui:RetryScope.Condition>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:RetryScope>
-                    <uix:NCheckState DisplayName="Check App State 'Verifica se logou'" sap:VirtualizedContainerService.HintSize="954,498" sap2010:WorkflowViewState.IdRef="NCheckState_20" Version="V4">
+                    <uix:NCheckState DisplayName="Check App State 'Verifica se logou'" sap:VirtualizedContainerService.HintSize="388,48" sap2010:WorkflowViewState.IdRef="NCheckState_20" Version="V4">
                       <uix:NCheckState.IfExists>
                         <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,258" sap2010:WorkflowViewState.IdRef="Sequence_55">
                           <sap:WorkflowViewStateService.ViewState>
@@ -1517,7 +1407,7 @@
                       </uix:NCheckState.Target>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
@@ -1526,10 +1416,10 @@
                 </Sequence>
               </TryCatch.Try>
               <TryCatch.Catches>
-                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="1082,22" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="422,416" sap2010:WorkflowViewState.IdRef="Catch`1_2">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
