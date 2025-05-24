@@ -82,12 +82,12 @@
       "Description": "Nome da Pasta onde está localizada a Fila no Orchestrator"
     },
     {
-      "Name": "OrchestratorNextQueueName",
+      "Name": "OrchestratorNextQueueFolder",
       "Value": "GrupoCCR/CSC/Contabilidade e Fiscal/Fiscal",
       "Description": "Nome da próxima fila de step do Processo (Para onde irão os itens de sucesso para continuar o processo)"
     },
     {
-      "Name": "OrchestratorNextQueueFolder",
+      "Name": "OrchestratorNextQueueName",
       "Value": "Fila_PRP-696_Step5_CargaSpedxEasyWay_Performer",
       "Description": "Nome da Pasta onde está localizada a Fila no Orchestrator"
     },
