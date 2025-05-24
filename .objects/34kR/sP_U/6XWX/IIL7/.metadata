@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Cadastros",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "IIL71oKhFUSz3NCq5rmx8g",
+  "Reference": "lg5H7izgS0qA3fwFs2FUbQ/IIL71oKhFUSz3NCq5rmx8g",
+  "ParentRef": "lg5H7izgS0qA3fwFs2FUbQ/6XWX4NUBf0Okdj-TFUjCgg",
+  "Created": "2025-05-24T11:14:11.7686334Z",
+  "Updated": "2025-05-24T11:14:11.7686334Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.10.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

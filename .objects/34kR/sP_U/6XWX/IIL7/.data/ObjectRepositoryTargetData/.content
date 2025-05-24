@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="631spWbXAk2lG5gh_zCsqg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" CVScreenId="76f395e9-16f2-41dc-b5e7-db6659234425" CvTextArea="14, 34, 53, 12" CvTextArgument="Cadastros" CvType="Text" DesignTimeRectangle="14, 34, 53, 12" DesignTimeScaleFactor="1" ElementType="Text" Guid="f0e8d8dc-da02-42a2-ac42-cc7eea463db4" ImageBase64="" ScopeSelectorArgument="&lt;wnd aaname='Easy-SPED-Contábil*' app='mstsc.exe' cls='RAIL_WINDOW' title='Easy-SPED-Contábil*' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="76f395e9-16f2-41dc-b5e7-db6659234425" CvTextArea="80, 34, 68, 12" CvTextArgument="Movimentos" CvType="Text" DesignTimeRectangle="80, 34, 68, 12" ElementType="Text" Guid="6c4116a1-26d6-4118-9b76-04e1d24ec627" SearchSteps="CV" TargetType="ComputerVisionBased" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="c54e9161f0bd0f596a04f1ee951a9969.png" xmlns="">0Mdck7vfC_k-3nnEvL_k9ig</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

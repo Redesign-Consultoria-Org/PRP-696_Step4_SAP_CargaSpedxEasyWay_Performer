@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1477,1618</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1477,1578</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="100">
@@ -161,7 +161,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message Process Start" sap:VirtualizedContainerService.HintSize="541,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started Process: &quot; &amp; in_TransactionItem.Reference]" />
-    <Sequence sap2010:Annotation.AnnotationText="Pega os dados da fila e do config&#xD;&#xA;Normaliza os dados de entrada para inputs no sistema" DisplayName="Get Configs" sap:VirtualizedContainerService.HintSize="541,570" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence sap2010:Annotation.AnnotationText="Pega os dados da fila e do config&#xA;Normaliza os dados de entrada para inputs no sistema" DisplayName="Get Configs" sap:VirtualizedContainerService.HintSize="541,570" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -249,6 +249,7 @@
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_strDescription">[strDescription]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_strFolderTemp">[strFolderTemp]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Enterprise">[strEnterprise]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="UploadSharePoint - Invoke Workflow File (Specific_Content\UploadSharePoint.xaml)" sap:VirtualizedContainerService.HintSize="541,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Specific_Content\UploadSharePoint.xaml">

@@ -1,7 +1,7 @@
 {
   "name": "PRP-696_Step4_EASYWAY_CargaSpedxEasyWay_Performer",
   "projectId": "75520dad-31a7-49ed-ae29-410f7a232a44",
-  "description": "Processo: PRP-XXXX Nome Processo\nStep: PRP-XXXX_StepX_Sistema\r\nDescrição: Parágrafo explicativo deste step, descrevendo de forma clara e sucinta as ações no sistema.",
+  "description": "Processo: PRP-696_Step4_EASYWAY_CargaSpedxEasyWay_Performer\nStep: PRP-696_Step4_EASYWAY\nDescrição: Automação acessesa o sistema EasyWay para realizar extração de arquivos xlsx para cada empresa da fila.",
   "main": "Main.xaml",
   "dependencies": {
     "CCR.RPA.Office365.Activities": "[1.3.0]",
