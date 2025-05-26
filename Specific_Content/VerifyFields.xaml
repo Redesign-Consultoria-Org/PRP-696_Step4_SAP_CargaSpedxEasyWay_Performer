@@ -506,7 +506,7 @@
                 </ui:Target>
               </p:CvClickWithDescriptor.Target>
             </p:CvClickWithDescriptor>
-            <If Condition="[in_strMonth.Equals(&quot;12&quot;) AndAlso (in_strPeriod.Equals(&quot;15&quot;) OrElse in_strPeriod.Equals(&quot;16&quot;))]" sap:VirtualizedContainerService.HintSize="450,762" sap2010:WorkflowViewState.IdRef="If_5">
+            <If Condition="[in_strMonth.Equals(&quot;12&quot;) AndAlso (in_strPeriod.Equals(&quot;15&quot;) OrElse in_strPeriod.Equals(&quot;16&quot;))]" DisplayName="If - Verifica se é mês 12 e o período 15 ou 16" sap:VirtualizedContainerService.HintSize="450,762" sap2010:WorkflowViewState.IdRef="If_5">
               <If.Then>
                 <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,296" sap2010:WorkflowViewState.IdRef="Sequence_14">
                   <sap:WorkflowViewStateService.ViewState>
