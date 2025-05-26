@@ -3,11 +3,13 @@
     <x:Property Name="in_strDescription" Type="InArgument(x:String)" />
     <x:Property Name="in_strFolderTemp" Type="InArgument(x:String)" />
     <x:Property Name="in_Enterprise" Type="InArgument(x:String)" />
+    <x:Property Name="in_strMonth" Type="InArgument(x:String)" />
+    <x:Property Name="in_strPeriod" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1477,3296</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1477,3841</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>VerifyFields_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -46,6 +48,7 @@
       <x:String>UiPath.CV.Activities.Interfaces</x:String>
       <x:String>System.Linq.Expressions</x:String>
       <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.ComponentModel</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -103,9 +106,13 @@
       <AssemblyReference>System.Linq.Async</AssemblyReference>
       <AssemblyReference>System.Collections</AssemblyReference>
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Esse  workflow é responsável por garantir que a configuração da extração o excel esteja correta e realização do download do arquivo Excel.&#xA;Campos marcados antes do download:&#xA; -Columngheadings&#xA; -Use  worksheet functions to represent subtctal fields in report&#xA; -Column width based in objects in area&#xA; -Details&#xA; - Non-Tabular" DisplayName="VerifyFields" sap:VirtualizedContainerService.HintSize="546,3231" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Esse  workflow é responsável por garantir que a configuração da extração o excel esteja correta e realização do download do arquivo Excel.&#xA;Campos marcados antes do download:&#xA; -Columngheadings&#xA; -Use  worksheet functions to represent subtctal fields in report&#xA; -Column width based in objects in area&#xA; -Details&#xA; - Non-Tabular" DisplayName="VerifyFields" sap:VirtualizedContainerService.HintSize="546,3776" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -113,7 +120,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message inf init verify" sap:VirtualizedContainerService.HintSize="484,173" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;Iniciando verificação de configuração do arquivo&quot;]" />
-    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" Server="{x:Null}" sap2010:Annotation.AnnotationText="Por se tratar de um ambiente virtualizado, é necessário usar visão computacional para mapear os elementos." ApiKey="lMRuF0JXCDWxC4oxjXhJlchPzQJfByg8hFeFDlO0eqLVOIULcWnkHaKES96mze3wbTJoLrzZtV02BFi/4U+bTg==" CvMethod="ElementDetection, OCR" DesignTimeCacheId="a9522916-03c3-41fd-9432-f6f820cc60e7" DisplayName="CV Screen Scope 'VerifyFields" sap:VirtualizedContainerService.HintSize="484,2674" sap2010:WorkflowViewState.IdRef="CVScope_1" SendOnPremData="False" Version="V6">
+    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" Server="{x:Null}" sap2010:Annotation.AnnotationText="Por se tratar de um ambiente virtualizado, é necessário usar visão computacional para mapear os elementos." ApiKey="lMRuF0JXCDWxC4oxjXhJlchPzQJfByg8hFeFDlO0eqLVOIULcWnkHaKES96mze3wbTJoLrzZtV02BFi/4U+bTg==" CvMethod="ElementDetection, OCR" DesignTimeCacheId="a9522916-03c3-41fd-9432-f6f820cc60e7" DisplayName="CV Screen Scope 'VerifyFields" sap:VirtualizedContainerService.HintSize="484,3219" sap2010:WorkflowViewState.IdRef="CVScope_1" SendOnPremData="False" Version="V6">
       <p:CVScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -499,30 +506,80 @@
                 </ui:Target>
               </p:CvClickWithDescriptor.Target>
             </p:CvClickWithDescriptor>
-            <p:CvTypeIntoWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (138,407,831,24)&quot; +&#xA;&quot;Anchor: Text 'File name:' (81,413,55,12)&quot;]" DesignTimeCacheId="17b55af0-d822-44cc-9a4f-064d8faaa812" DesignTimeScaleFactor="1" DisplayName="CV Type Into - FileName" EmptyField="True" sap:VirtualizedContainerService.HintSize="450,217" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_1" InformativeScreenshot="24bfb2226367b7ba2984a03814fad09c" NumberOfScrolls="2" ScrollDirection="None" Text="[in_strFolderTemp &amp;&quot;\&quot; &amp;  in_strDescription &amp; &quot;-&quot; &amp; in_Enterprise &amp; &quot; EasyWay&quot; &amp; &quot;[k(enter)]&quot;]" Version="V6">
-              <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
-                <uc:CvDescriptor Id="7b97c9fc-58ae-4188-8397-734475c295a8">
-                  <uc:CvDescriptor.Anchors>
-                    <x:Array Type="uc:CvElementDescriptor">
-                      <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="81, 413, 55, 12" ElementType="Text" Text="File name:" />
-                    </x:Array>
-                  </uc:CvDescriptor.Anchors>
-                  <uc:CvDescriptor.Target>
-                    <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="138, 407, 831, 24" ElementType="InputBox" />
-                  </uc:CvDescriptor.Target>
-                </uc:CvDescriptor>
-              </p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
-              <p:CvTypeIntoWithDescriptor.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="b9f0be78-05a1-4091-8364-c2682dc5a7ef">
-                  <ui:Target.TimeoutMS>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:Target.TimeoutMS>
-                  <ui:Target.WaitForReady>
-                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                  </ui:Target.WaitForReady>
-                </ui:Target>
-              </p:CvTypeIntoWithDescriptor.Target>
-            </p:CvTypeIntoWithDescriptor>
+            <If Condition="[in_strMonth.Equals(&quot;12&quot;) AndAlso (in_strPeriod.Equals(&quot;15&quot;) OrElse in_strPeriod.Equals(&quot;16&quot;))]" sap:VirtualizedContainerService.HintSize="450,762" sap2010:WorkflowViewState.IdRef="If_5">
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,296" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <p:CvTypeIntoWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (138,407,831,24)&quot; +&#xA;&quot;Anchor: Text 'File name:' (81,413,55,12)&quot;]" DesignTimeCacheId="17b55af0-d822-44cc-9a4f-064d8faaa812" DesignTimeScaleFactor="1" DisplayName="CV Type Into - FileName mais Perído" EmptyField="True" sap:VirtualizedContainerService.HintSize="354,208" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_4" InformativeScreenshot="24bfb2226367b7ba2984a03814fad09c" NumberOfScrolls="2" ScrollDirection="None" Text="[in_strFolderTemp &amp;&quot;\&quot; &amp;  in_strDescription &amp; &quot;-&quot; &amp; in_Enterprise &amp; &quot; EasyWay&quot; &amp; in_strPeriod &amp; &quot;[k(enter)]&quot;]" Version="V6">
+                    <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
+                      <uc:CvDescriptor Id="7b97c9fc-58ae-4188-8397-734475c295a8">
+                        <uc:CvDescriptor.Anchors>
+                          <x:Array Type="uc:CvElementDescriptor">
+                            <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="81, 413, 55, 12" ElementType="Text" Text="File name:" />
+                          </x:Array>
+                        </uc:CvDescriptor.Anchors>
+                        <uc:CvDescriptor.Target>
+                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="138, 407, 831, 24" ElementType="InputBox" />
+                        </uc:CvDescriptor.Target>
+                      </uc:CvDescriptor>
+                    </p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
+                    <p:CvTypeIntoWithDescriptor.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="b9f0be78-05a1-4091-8364-c2682dc5a7ef">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </p:CvTypeIntoWithDescriptor.Target>
+                  </p:CvTypeIntoWithDescriptor>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,296" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <p:CvTypeIntoWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (138,407,831,24)&quot; +&#xA;&quot;Anchor: Text 'File name:' (81,413,55,12)&quot;]" DesignTimeCacheId="17b55af0-d822-44cc-9a4f-064d8faaa812" DesignTimeScaleFactor="1" DisplayName="CV Type Into - FileName" EmptyField="True" sap:VirtualizedContainerService.HintSize="354,208" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_1" InformativeScreenshot="24bfb2226367b7ba2984a03814fad09c" NumberOfScrolls="2" ScrollDirection="None" Text="[in_strFolderTemp &amp;&quot;\&quot; &amp;  in_strDescription &amp; &quot;-&quot; &amp; in_Enterprise &amp; &quot; EasyWay&quot; &amp; &quot;[k(enter)]&quot;]" Version="V6">
+                    <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
+                      <uc:CvDescriptor Id="7b97c9fc-58ae-4188-8397-734475c295a8">
+                        <uc:CvDescriptor.Anchors>
+                          <x:Array Type="uc:CvElementDescriptor">
+                            <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="81, 413, 55, 12" ElementType="Text" Text="File name:" />
+                          </x:Array>
+                        </uc:CvDescriptor.Anchors>
+                        <uc:CvDescriptor.Target>
+                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="138, 407, 831, 24" ElementType="InputBox" />
+                        </uc:CvDescriptor.Target>
+                      </uc:CvDescriptor>
+                    </p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
+                    <p:CvTypeIntoWithDescriptor.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="b9f0be78-05a1-4091-8364-c2682dc5a7ef">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </p:CvTypeIntoWithDescriptor.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </p:CvTypeIntoWithDescriptor>
+                </Sequence>
+              </If.Else>
+            </If>
             <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (771,477,88,26)&quot; +&#xA;&quot;Anchor: Text 'Save' (802,483,26,12)&quot;]" DesignTimeCacheId="17b55af0-d822-44cc-9a4f-064d8faaa812" DesignTimeScaleFactor="1" DisplayName="CV Click - Save" sap:VirtualizedContainerService.HintSize="450,217" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_6" InformativeScreenshot="7d566b160e0063523cd1e850910e833c" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
               <p:CvClickWithDescriptor.CursorPosition>
                 <ui:CursorPosition Position="Center">
